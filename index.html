@@ -22,7 +22,8 @@
             <nav class="flex space-x-6 overflow-x-auto">
                 <button class="nav-btn text-yellow-400 font-semibold" data-target="home">Home</button>
                 <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="races">Races</button>
-                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="warrior">Warrior Guide</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="warrior">Warrior</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="paladin">Paladin</button>
                 <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="guides">General Guides</button>
                 <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="gear">Gear & Tools</button>
             </nav>
@@ -42,8 +43,8 @@
                 <div class="bg-wow-panel p-6 rounded-lg shadow-lg">
                     <h3 class="text-2xl font-bold text-yellow-400 mb-2">Classes</h3>
                     <ul class="space-y-2">
-                        <li><button class="nav-btn text-white hover:text-yellow-400" data-target="warrior">Warrior</button></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Paladin (Coming Soon)</span></li>
+                        <li><button class="nav-btn text-white hover:text-yellow-400 font-bold" data-target="warrior">Warrior</button></li>
+                        <li><button class="nav-btn text-pink-300 hover:text-pink-400 font-bold" data-target="paladin">Paladin</button></li>
                         <li><span class="text-gray-500 cursor-not-allowed">Hunter (Coming Soon)</span></li>
                         <li><span class="text-gray-500 cursor-not-allowed">Rogue (Coming Soon)</span></li>
                         <li><span class="text-gray-500 cursor-not-allowed">Priest (Coming Soon)</span></li>
@@ -209,6 +210,124 @@
             </div>
         </section>
 
+        <!-- PALADIN CLASS HUB -->
+        <section id="paladin" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-pink-400">Paladin Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+
+            <!-- 1. Quick Facts -->
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvE):</strong> Human (Ally) / Undead (Horde)</div>
+                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvP):</strong> Dwarf (Ally) / Tauren (Horde)</div>
+                    <div><strong class="text-yellow-400 block mb-1">Leveling Spec:</strong> Retribution</div>
+                    <div><strong class="text-yellow-400 block mb-1">Difficulty:</strong> Easy (Very High Survivability)</div>
+                    <div><strong class="text-yellow-400 block mb-1">Professions:</strong> Mining / Engineering</div>
+                </div>
+            </div>
+
+            <!-- 2. Talent Tree & Leveling Order -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-pink-400">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19 (Retribution):</strong> Divine Strength (5/5), Improved Seal of the Crusader (4/5) <br><span class="text-sm text-gray-400">Divine Strength gives raw attack power. Improved SotC is great for longer fights before you get Command.</span></li>
+                        <li><strong class="text-white text-lg block">Level 20–29 (Retribution):</strong> Seal of Command (1/1), Pursuit of Justice (2/2), Conviction (5/5) <br><span class="text-sm text-gray-400">Seal of Command at level 20 is your biggest power spike. Pursuit of Justice speeds up leveling massively.</span></li>
+                        <li><strong class="text-white text-lg block">Level 30–39 (Retribution):</strong> Sanctity Aura (1/1), Two-Handed Weapon Specialization (3/3), Vengeance (5/5) <br><span class="text-sm text-gray-400">Sanctity Aura boosts all your holy damage. Vengeance gives huge burst potential after a critical strike.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Rotation & Playstyle -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Single Target (Level 20+)</h4>
+                        <p class="leading-relaxed">Keep Blessing of Might active. Open with <strong>Seal of the Crusader</strong> &rarr; <strong>Judgement</strong> (to apply the holy damage taken debuff). Immediately cast <strong>Seal of Command</strong> and start auto-attacking. Judge Command right before the seal expires or if the mob runs away.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Multi-Target & Survival</h4>
+                        <p class="leading-relaxed">Paladins lack AoE damage until Consecration (if specced). Focus on surviving: use <strong>Retribution Aura</strong> to reflect damage. If your health gets low, cast <strong>Hammer of Justice</strong> (Stun) to safely cast <strong>Holy Light</strong>. For emergencies, use <strong>Divine Shield</strong> (Bubble) to heal to full un-interrupted.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Stat Priority -->
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-white font-bold">Weapon DPS</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-green-400 font-bold">Strength</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-purple-400 font-bold">Intellect</span>
+                </div>
+                <p class="text-sm mt-4 text-gray-400 max-w-2xl">Weapon DPS is king for Seal of Command. Strength increases your attack power. A small amount of Intellect is useful so you don't run out of mana for your Seals and Heals, but physical damage stats come first.</p>
+            </div>
+
+            <!-- 5. Equipment (Leveling BiS) -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS Weapons)</h3>
+                <div class="overflow-x-auto rounded-lg shadow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-800 border-b border-gray-600">
+                                <th class="p-4 font-semibold text-white">Level Range</th>
+                                <th class="p-4 font-semibold text-white">Item Name</th>
+                                <th class="p-4 font-semibold text-white">Source</th>
+                                <th class="p-4 font-semibold text-white">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
+                                <td class="p-4">1–15</td>
+                                <td class="p-4 font-bold text-green-400">Wooden Mallet</td>
+                                <td class="p-4 text-gray-300">Early Quests / Drops</td>
+                                <td class="p-4 text-gray-300">2H Mace</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
+                                <td class="p-4">16–30</td>
+                                <td class="p-4 font-bold text-blue-400">Verigan's Fist</td>
+                                <td class="p-4 text-gray-300">Paladin Class Quest (Level 20)</td>
+                                <td class="p-4 text-gray-300">2H Mace</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
+                                <td class="p-4">31–45</td>
+                                <td class="p-4 font-bold text-blue-400">Bonebiter</td>
+                                <td class="p-4 text-gray-300">In the Name of the Light (Scarlet Monastery)</td>
+                                <td class="p-4 text-gray-300">2H Axe</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
+                                <td class="p-4">46–60</td>
+                                <td class="p-4 font-bold text-blue-400">Lightforge Blade</td>
+                                <td class="p-4 text-gray-300">Quest / World Drop</td>
+                                <td class="p-4 text-gray-300">2H Sword</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 6. Class Tips & Macros -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">6. Class Tips & Macros</h3>
+                <div class="bg-gray-900 border border-gray-700 p-5 rounded-lg font-mono text-sm text-gray-300">
+                    <p class="text-green-400 mb-2">// Start Attack / Auto-Judge Macro</p>
+                    <p class="mb-4">#showtooltip Judgement<br>
+                    /startattack<br>
+                    /cast Judgement</p>
+                    
+                    <p class="text-green-400 mb-2">// Emergency Bubble + Heal (Press Twice)</p>
+                    <p>#showtooltip Divine Shield<br>
+                    /castsequence reset=5 Divine Shield, Holy Light</p>
+                </div>
+            </div>
+        </section>
+
         <!-- GUIDES TAB -->
         <section id="guides" class="tab-pane">
             <h2 class="text-3xl font-bold text-white mb-6">General Guides</h2>
@@ -235,7 +354,8 @@
     </main>
 
     <footer class="bg-gray-900 border-t border-gray-800 text-center py-6 mt-auto">
-        <p class="text-gray-500 text-sm">© 2026 WoW Forever Guide. Created in HTML, Tailwind CSS & JavaScript.</p>
+        <p class="text-gray-500 text-sm mb-2">© 2026 WoW Forever Guide. Created in HTML, Tailwind CSS & JavaScript.</p>
+        <p class="text-gray-600 text-xs px-4">World of Warcraft, Warcraft and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. This site is not affiliated with Blizzard Entertainment.</p>
     </footer>
 
     <script>
@@ -250,9 +370,12 @@
                     // Reset all tabs
                     tabPanes.forEach(p => p.classList.remove('active'));
                     navBtns.forEach(b => {
-                        b.classList.remove('text-yellow-400', 'font-semibold');
-                        if(b.parentElement.tagName !== 'LI') { // Don't gray out the sidebar links
+                        b.classList.remove('text-yellow-400', 'text-pink-400', 'font-bold');
+                        if(b.parentElement.tagName !== 'LI') { // Keep top nav baseline color
                             b.classList.add('text-gray-400');
+                        } else {
+                            if(b.getAttribute('data-target') === 'warrior') b.classList.add('text-white');
+                            if(b.getAttribute('data-target') === 'paladin') b.classList.add('text-pink-300');
                         }
                     });
 
@@ -262,11 +385,18 @@
                         targetPane.classList.add('active');
                     }
 
-                    // Highlight active nav button (if it's in the top nav)
+                    // Highlight active nav button
                     const activeNavBtns = document.querySelectorAll(`.nav-btn[data-target="${targetId}"]`);
                     activeNavBtns.forEach(activeBtn => {
-                         activeBtn.classList.add('text-yellow-400', 'font-semibold');
-                         activeBtn.classList.remove('text-gray-400');
+                         activeBtn.classList.remove('text-gray-400', 'text-white', 'text-pink-300');
+                         activeBtn.classList.add('font-bold');
+                         
+                         // Specific highlight colors based on class
+                         if(targetId === 'paladin') {
+                             activeBtn.classList.add('text-pink-400');
+                         } else {
+                             activeBtn.classList.add('text-yellow-400');
+                         }
                     });
                 });
             });
