@@ -29,18 +29,31 @@
     <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-yellow-400 uppercase tracking-wider hidden md:block">WoW Forever</h1>
-            <nav class="flex space-x-4 md:space-x-6 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+            <nav class="flex flex-wrap gap-4 md:gap-6 w-full md:w-auto pb-2 md:pb-0 items-center">
                 <button class="nav-btn text-yellow-400 font-bold" data-target="home">Home</button>
                 <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="races">Races</button>
-                <button class="nav-btn text-gray-400 hover:text-c-warrior transition" data-target="warrior">Warrior</button>
-                <button class="nav-btn text-gray-400 hover:text-c-paladin transition" data-target="paladin">Paladin</button>
-                <button class="nav-btn text-gray-400 hover:text-c-hunter transition" data-target="hunter">Hunter</button>
-                <button class="nav-btn text-gray-400 hover:text-c-rogue transition" data-target="rogue">Rogue</button>
-                <button class="nav-btn text-gray-400 hover:text-c-priest transition" data-target="priest">Priest</button>
-                <button class="nav-btn text-gray-400 hover:text-c-shaman transition" data-target="shaman">Shaman</button>
-                <button class="nav-btn text-gray-400 hover:text-c-mage transition" data-target="mage">Mage</button>
-                <button class="nav-btn text-gray-400 hover:text-c-warlock transition" data-target="warlock">Warlock</button>
-                <button class="nav-btn text-gray-400 hover:text-c-druid transition" data-target="druid">Druid</button>
+                
+                <!-- Class Dropdown -->
+                <div class="relative group">
+                    <button id="classDropdownBtn" class="text-gray-400 hover:text-yellow-400 transition flex items-center focus:outline-none">
+                        Classes
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="classDropdownMenu" class="absolute left-0 mt-2 w-40 bg-gray-800 border border-gray-700 rounded-md shadow-xl z-50 hidden">
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-warrior transition" data-target="warrior">Warrior</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-paladin transition" data-target="paladin">Paladin</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-hunter transition" data-target="hunter">Hunter</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-rogue transition" data-target="rogue">Rogue</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-priest transition" data-target="priest">Priest</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-shaman transition" data-target="shaman">Shaman</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-mage transition" data-target="mage">Mage</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-warlock transition" data-target="warlock">Warlock</button>
+                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-druid transition" data-target="druid">Druid</button>
+                    </div>
+                </div>
+
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="guides">General Guides</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="gear">Gear & Tools</button>
             </nav>
         </div>
     </header>
@@ -672,15 +685,120 @@
 
         <!-- GUIDES TAB -->
         <section id="guides" class="tab-pane">
-            <h2 class="text-3xl font-bold text-white mb-6">General Guides</h2>
-            <div class="bg-wow-panel p-6 rounded-lg">
-                <p class="mb-4 text-lg">Welcome to the general guides section. Here you will find:</p>
-                <ul class="list-disc pl-6 space-y-3 text-gray-300">
-                    <li><strong class="text-white">1-60 Speed Leveling:</strong> Optimized zone orders and quest skipping strategies.</li>
-                    <li><strong class="text-white">Cozy Sleeping Bag:</strong> Step-by-step to unlock the massive XP buff sleeping bag.</li>
-                    <li><strong class="text-white">Legacy System:</strong> Comprehensive guide to account-wide unlocks and rep sharing.</li>
-                    <li><strong class="text-white">Addons:</strong> Best configurations for Questie, Bagnon, Details!, and WeakAuras.</li>
-                </ul>
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-white">General Guides</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Updated for 2026</span>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8">
+                
+                <!-- 1. Speed Leveling -->
+                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-yellow-500">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center"><span class="mr-2">▶</span> 1-60 Speed Leveling Strategy</h3>
+                    <p class="text-gray-300 mb-4">The golden rule of speed leveling: travel less, kill more. Skip quests that have terrible drop rates or require you to walk across multiple zones.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-4">
+                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                            <h4 class="text-xl font-bold text-blue-400 mb-2">Alliance Route</h4>
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li><strong class="text-white">1–10:</strong> Starter Zone</li>
+                                <li><strong class="text-white">10–14:</strong> Westfall / Loch Modan</li>
+                                <li><strong class="text-white">14–20:</strong> Darkshore (Highly optimized quest routing)</li>
+                                <li><strong class="text-white">20–30:</strong> Redridge Mountains & Duskwood</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                            <h4 class="text-xl font-bold text-red-400 mb-2">Horde Route</h4>
+                            <ul class="space-y-2 text-gray-300 text-sm">
+                                <li><strong class="text-white">1–10:</strong> Starter Zone</li>
+                                <li><strong class="text-white">10–14:</strong> Durotar / Mulgore / Silverpine</li>
+                                <li><strong class="text-white text-yellow-300">14–25: The Barrens</strong> <br><span class="text-gray-400">Do not skip! The quest density here is the best in the game around level 14, easily carrying you to 25 with Crossroads and Camp Taurajo hubs.</span></li>
+                                <li><strong class="text-white">25–30:</strong> Stonetalon Mountains & Ashenvale</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                        <h4 class="text-xl font-bold text-white mb-2">Neutral Zones (30–60)</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            <strong class="text-yellow-200">30-40:</strong> Stranglethorn Vale, Arathi Highlands, Desolace.<br>
+                            <strong class="text-yellow-200">40-50:</strong> Tanaris, Feralas, The Hinterlands, Searing Gorge.<br>
+                            <strong class="text-yellow-200">50-60:</strong> Un'Goro Crater, Western Plaguelands, Eastern Plaguelands, Winterspring.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2. Cozy Sleeping Bag -->
+                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                    <h3 class="text-2xl font-bold text-green-400 mb-4 flex items-center"><span class="mr-2">▶</span> Cozy Sleeping Bag Questline</h3>
+                    <p class="text-gray-300 mb-4">The <strong class="text-green-300">Student Fodder</strong> and <strong class="text-blue-300">Cozy Sleeping Bag</strong> give you a massive stacking XP buff. Here is how to unlock it step-by-step:</p>
+                    <ol class="list-decimal pl-5 space-y-3 text-gray-300">
+                        <li><strong class="text-white">Start the Quest:</strong> Horde starts at the burnt out camp south of Camp Taurajo in <span class="text-yellow-200">The Barrens</span>. Alliance starts in <span class="text-yellow-200">Westfall</span> near the Alexston Farm dirt mound.</li>
+                        <li><strong class="text-white">Stonetalon / Loch Modan:</strong> Follow the note to the Sun Rock Retreat path (Horde) or the Stonewrought Dam (Alliance). Click the interactable item on the ground.</li>
+                        <li><strong class="text-white">Hillsbrad Foothills:</strong> Head to the secret camp on the mountain ridge separating Hillsbrad and Alterac Mountains.</li>
+                        <li><strong class="text-white">Wailing Caverns (Final Step):</strong> Climb the rocks directly above the Wailing Caverns entrance in the Barrens. Complete a small jumping puzzle to find the messenger's camp and loot the bag!</li>
+                    </ol>
+                </div>
+
+                <!-- 3. Legacy System -->
+                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center"><span class="mr-2">▶</span> Legacy System (Account-Wide)</h3>
+                    <p class="text-gray-300 mb-4">WoW Forever features a modernized Legacy System, ensuring your hard work is respected across all your characters (Alts).</p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                            <h4 class="text-lg font-bold text-purple-300 mb-2">Reputation Sharing</h4>
+                            <p class="text-sm text-gray-400">Unlock a reputation once, and the progress is shared. You only need to grind Argent Dawn or Timbermaw Hold on your main.</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                            <h4 class="text-lg font-bold text-purple-300 mb-2">Warbank Access</h4>
+                            <p class="text-sm text-gray-400">A new tab in the bank allows you to deposit crafting materials, gold, and bind-on-account items instantly accessible by any alt.</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                            <h4 class="text-lg font-bold text-purple-300 mb-2">Transmog Unlocks</h4>
+                            <p class="text-sm text-gray-400">Looting any soulbound item permanently unlocks its appearance for your entire account, regardless of armor type.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Addons -->
+                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-orange-500">
+                    <h3 class="text-2xl font-bold text-orange-400 mb-4 flex items-center"><span class="mr-2">▶</span> Essential Addons</h3>
+                    <p class="text-gray-300 mb-4">You cannot play efficiently without these core addons installed in your <code>_classic_/Interface/AddOns</code> folder:</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Questie</span>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-300">Absolute necessity. Shows available quests and objectives on your map. <strong>Pro-Tip:</strong> Go to settings and enable "Show low level quests" if you are out-leveling zones but still need the reputation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Bagnon</span>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-300">Merges all your separate bags into one massive window. Also lets you see the inventory and gold of your offline alts when hovering over items.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Details!</span>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-300">The most accurate damage meter. Use this to track not just your DPS, but your threat generation (TinyThreat plugin) and interrupt tracking in dungeons.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                            <div class="flex-shrink-0 mt-1">
+                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">WeakAuras</span>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-300">The most powerful addon in the game. You can import custom class scripts from <a href="https://wago.io" class="text-blue-400 underline">Wago.io</a> to track your cooldowns, mana ticks, and combat procs visually in the middle of your screen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -704,6 +822,8 @@
         document.addEventListener("DOMContentLoaded", () => {
             const navBtns = document.querySelectorAll('.nav-btn[data-target]');
             const tabPanes = document.querySelectorAll('.tab-pane');
+            const dropdownBtn = document.getElementById('classDropdownBtn');
+            const dropdownMenu = document.getElementById('classDropdownMenu');
             
             const colorClasses = [
                 'text-c-warrior', 'text-c-paladin', 'text-c-hunter', 
@@ -723,9 +843,29 @@
                 'druid': 'text-c-druid'
             };
 
+            // Toggle dropdown
+            if (dropdownBtn && dropdownMenu) {
+                dropdownBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('hidden');
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                        dropdownMenu.classList.add('hidden');
+                    }
+                });
+            }
+
             navBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     const targetId = btn.getAttribute('data-target');
+                    
+                    // Close dropdown if it's open
+                    if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                        dropdownMenu.classList.add('hidden');
+                    }
                     
                     // Reset all tabs
                     tabPanes.forEach(p => p.classList.remove('active'));
@@ -735,13 +875,13 @@
                         b.classList.remove('font-bold', 'text-yellow-400');
                         colorClasses.forEach(c => b.classList.remove(c));
                         
-                        // Give everything base gray text except the class buttons on home screen if we want to preserve their colors
-                        if(b.parentElement.tagName === 'LI' && b.parentElement.parentElement.parentElement.id !== 'home') {
+                        if(b.parentElement.id === 'classDropdownMenu') {
+                            b.classList.add('text-gray-300');
+                        } else if(b.parentElement.tagName === 'LI' && b.parentElement.parentElement.parentElement.id !== 'home') {
                             b.classList.add('text-gray-400');
                         } else if(b.parentElement.tagName === 'NAV') {
                             b.classList.add('text-gray-400');
                         } else if(b.parentElement.classList.contains('grid')) {
-                             // Let the home buttons keep their colors
                              const tId = b.getAttribute('data-target');
                              if(targetColors[tId]) b.classList.add(targetColors[tId]);
                         }
@@ -758,7 +898,7 @@
                     // Highlight active nav buttons in header
                     const activeNavBtns = document.querySelectorAll(`header .nav-btn[data-target="${targetId}"]`);
                     activeNavBtns.forEach(activeBtn => {
-                         activeBtn.classList.remove('text-gray-400');
+                         activeBtn.classList.remove('text-gray-400', 'text-gray-300');
                          activeBtn.classList.add('font-bold');
                          
                          if(targetColors[targetId]) {
@@ -767,6 +907,15 @@
                              activeBtn.classList.add('text-yellow-400');
                          }
                     });
+
+                    // Highlight "Classes" dropdown button if a class is active
+                    if (targetColors[targetId] && dropdownBtn) {
+                         dropdownBtn.classList.add('text-yellow-400', 'font-bold');
+                         dropdownBtn.classList.remove('text-gray-400');
+                    } else if (dropdownBtn) {
+                         dropdownBtn.classList.remove('text-yellow-400', 'font-bold');
+                         dropdownBtn.classList.add('text-gray-400');
+                    }
                 });
             });
         });
