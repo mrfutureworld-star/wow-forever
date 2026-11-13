@@ -7,25 +7,40 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: #cbd5e1; }
-        .wow-gold { color: #fbbf24; }
         .bg-wow-panel { background-color: #1e293b; border: 1px solid #334155; }
         .tab-pane { display: none; }
         .tab-pane.active { display: block; }
-        .nav-btn { cursor: pointer; }
+        .nav-btn { cursor: pointer; white-space: nowrap; }
+        
+        /* Custom Class Colors for Tailwind */
+        .text-c-warrior { color: #C79C6E; }
+        .text-c-paladin { color: #F58CBA; }
+        .text-c-hunter { color: #ABD473; }
+        .text-c-rogue { color: #FFF569; }
+        .text-c-priest { color: #FFFFFF; }
+        .text-c-shaman { color: #0070DE; }
+        .text-c-mage { color: #69CCF0; }
+        .text-c-warlock { color: #9482C9; }
+        .text-c-druid { color: #FF7D0A; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- Header & Nav -->
     <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-yellow-400 uppercase tracking-wider">WoW Forever</h1>
-            <nav class="flex space-x-6 overflow-x-auto">
-                <button class="nav-btn text-yellow-400 font-semibold" data-target="home">Home</button>
+            <h1 class="text-2xl font-bold text-yellow-400 uppercase tracking-wider hidden md:block">WoW Forever</h1>
+            <nav class="flex space-x-4 md:space-x-6 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+                <button class="nav-btn text-yellow-400 font-bold" data-target="home">Home</button>
                 <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="races">Races</button>
-                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="warrior">Warrior</button>
-                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="paladin">Paladin</button>
-                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="guides">General Guides</button>
-                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="gear">Gear & Tools</button>
+                <button class="nav-btn text-gray-400 hover:text-c-warrior transition" data-target="warrior">Warrior</button>
+                <button class="nav-btn text-gray-400 hover:text-c-paladin transition" data-target="paladin">Paladin</button>
+                <button class="nav-btn text-gray-400 hover:text-c-hunter transition" data-target="hunter">Hunter</button>
+                <button class="nav-btn text-gray-400 hover:text-c-rogue transition" data-target="rogue">Rogue</button>
+                <button class="nav-btn text-gray-400 hover:text-c-priest transition" data-target="priest">Priest</button>
+                <button class="nav-btn text-gray-400 hover:text-c-shaman transition" data-target="shaman">Shaman</button>
+                <button class="nav-btn text-gray-400 hover:text-c-mage transition" data-target="mage">Mage</button>
+                <button class="nav-btn text-gray-400 hover:text-c-warlock transition" data-target="warlock">Warlock</button>
+                <button class="nav-btn text-gray-400 hover:text-c-druid transition" data-target="druid">Druid</button>
             </nav>
         </div>
     </header>
@@ -40,26 +55,27 @@
                 <p class="text-xl text-gray-400">Your ultimate resource for leveling, BiS gear, and mastering your class.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-wow-panel p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Classes</h3>
-                    <ul class="space-y-2">
-                        <li><button class="nav-btn text-white hover:text-yellow-400 font-bold" data-target="warrior">Warrior</button></li>
-                        <li><button class="nav-btn text-pink-300 hover:text-pink-400 font-bold" data-target="paladin">Paladin</button></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Hunter (Coming Soon)</span></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Rogue (Coming Soon)</span></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Priest (Coming Soon)</span></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Shaman (Coming Soon)</span></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Mage (Coming Soon)</span></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Warlock (Coming Soon)</span></li>
-                        <li><span class="text-gray-500 cursor-not-allowed">Druid (Coming Soon)</span></li>
-                    </ul>
+                <div class="bg-wow-panel p-6 rounded-lg shadow-lg col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4 border-b border-gray-700 pb-2">Select Your Class</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-warrior font-bold text-lg transition" data-target="warrior">Warrior</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-paladin font-bold text-lg transition" data-target="paladin">Paladin</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-hunter font-bold text-lg transition" data-target="hunter">Hunter</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-rogue font-bold text-lg transition" data-target="rogue">Rogue</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-priest font-bold text-lg transition" data-target="priest">Priest</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-shaman font-bold text-lg transition" data-target="shaman">Shaman</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-mage font-bold text-lg transition" data-target="mage">Mage</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-warlock font-bold text-lg transition" data-target="warlock">Warlock</button>
+                        <button class="nav-btn bg-gray-800 hover:bg-gray-700 border border-gray-600 rounded p-3 text-c-druid font-bold text-lg transition" data-target="druid">Druid</button>
+                    </div>
                 </div>
                 <div class="bg-wow-panel p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Popular Guides</h3>
-                    <ul class="space-y-2 list-disc pl-5">
-                        <li>1-60 Speed Leveling Strategy</li>
-                        <li>Cozy Sleeping Bag Questline</li>
-                        <li>Best Addons for Classic</li>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4 border-b border-gray-700 pb-2">Popular Guides</h3>
+                    <ul class="space-y-3">
+                        <li><button class="nav-btn text-white hover:text-yellow-400 transition flex items-center" data-target="guides"><span class="mr-2 text-yellow-500">▶</span> 1-60 Speed Leveling Strategy</button></li>
+                        <li><button class="nav-btn text-white hover:text-yellow-400 transition flex items-center" data-target="guides"><span class="mr-2 text-yellow-500">▶</span> Cozy Sleeping Bag Questline</button></li>
+                        <li><button class="nav-btn text-white hover:text-yellow-400 transition flex items-center" data-target="guides"><span class="mr-2 text-yellow-500">▶</span> Best Addons for Classic</button></li>
+                        <li><button class="nav-btn text-white hover:text-yellow-400 transition flex items-center" data-target="gear"><span class="mr-2 text-blue-400">★</span> Gear & Tools Hub</button></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +92,7 @@
                         <li><strong>Dwarf:</strong> Warrior, Paladin, Hunter, Rogue, Priest</li>
                         <li><strong>Night Elf:</strong> Warrior, Hunter, Rogue, Priest, Druid</li>
                         <li><strong>Gnome:</strong> Warrior, Rogue, Mage, Warlock</li>
-                        <li><strong>Skyborne (New):</strong> Warrior, Hunter, Rogue, Druid, Mage</li>
+                        <li><strong class="text-yellow-300">Skyborne (New):</strong> Warrior, Hunter, Rogue, Druid, Mage</li>
                     </ul>
                 </div>
                 <div class="bg-wow-panel p-4 rounded border-t-4 border-red-500">
@@ -86,32 +102,27 @@
                         <li><strong>Undead:</strong> Warrior, Paladin, Rogue, Priest, Mage, Warlock</li>
                         <li><strong>Tauren:</strong> Warrior, Paladin, Hunter, Shaman, Druid</li>
                         <li><strong>Troll:</strong> Warrior, Hunter, Rogue, Priest, Shaman, Mage</li>
-                        <li><strong>Skyborne (New):</strong> Warrior, Hunter, Rogue, Druid, Shaman</li>
+                        <li><strong class="text-yellow-300">Skyborne (New):</strong> Warrior, Hunter, Rogue, Druid, Shaman</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- WARRIOR CLASS HUB -->
+        <!-- ================= WARRIOR ================= -->
         <section id="warrior" class="tab-pane">
             <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
-                <h2 class="text-4xl font-extrabold text-[#C79C6E]">Warrior Guide</h2>
+                <h2 class="text-4xl font-extrabold text-c-warrior">Warrior Guide</h2>
                 <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
             </div>
-
-            <!-- 1. Quick Facts -->
             <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
                 <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvE):</strong> Human (Ally) / Orc (Horde)</div>
-                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvP):</strong> Gnome (Ally) / Orc (Horde)</div>
-                    <div><strong class="text-yellow-400 block mb-1">Leveling Spec:</strong> Arms</div>
-                    <div><strong class="text-yellow-400 block mb-1">Difficulty:</strong> Hard (Gear Dependent)</div>
-                    <div><strong class="text-yellow-400 block mb-1">Professions:</strong> Mining / Engineering</div>
+                    <div><strong class="text-c-warrior block mb-1">Best Race (PvE):</strong> Human / Orc</div>
+                    <div><strong class="text-c-warrior block mb-1">Best Race (PvP):</strong> Gnome / Orc</div>
+                    <div><strong class="text-c-warrior block mb-1">Leveling Spec:</strong> Arms</div>
+                    <div><strong class="text-c-warrior block mb-1">Difficulty:</strong> Hard (Gear Dependent)</div>
                 </div>
             </div>
-
-            <!-- 2. Talent Tree & Leveling Order -->
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
                 <div class="bg-wow-panel p-4 rounded border-l-4 border-[#C79C6E]">
@@ -122,23 +133,19 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- 3. Rotation & Playstyle -->
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-wow-panel p-5 rounded">
-                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Single Target</h4>
-                        <p class="leading-relaxed">Charge in &rarr; Rend &rarr; Mortal Strike (on cooldown) &rarr; Overpower (when it procs) &rarr; Sunder Armor (if target lives long enough). Use Heroic Strike only if you have excess rage (over 60).</p>
+                        <h4 class="font-bold text-c-warrior mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Charge &rarr; Rend &rarr; Mortal Strike &rarr; Overpower (on proc). Use Heroic Strike only if rage > 60.</p>
                     </div>
                     <div class="bg-wow-panel p-5 rounded">
-                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Multi-Target & Survival</h4>
-                        <p class="leading-relaxed">Pop Sweeping Strikes, switch to Berserker Stance, use Whirlwind, and Cleave. Hamstring kiting is crucial to survive against hard-hitting mobs. Save Bloodrage for emergency rage.</p>
+                        <h4 class="font-bold text-c-warrior mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">Sweeping Strikes, switch to Berserker Stance, Whirlwind, Cleave. Hamstring kite to survive.</p>
                     </div>
                 </div>
             </div>
-
-            <!-- 4. Stat Priority -->
             <div class="mb-8 bg-wow-panel p-6 rounded">
                 <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
                 <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
@@ -147,12 +154,9 @@
                     <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
                     <span class="text-yellow-600 font-bold">Stamina</span>
                 </div>
-                <p class="text-sm mt-4 text-gray-400 max-w-2xl">Always prioritize upgrading your weapon. A higher DPS weapon will increase your leveling speed significantly more than any single piece of armor.</p>
             </div>
-
-            <!-- 5. Equipment (Leveling BiS) -->
             <div class="mb-8">
-                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS Weapons)</h3>
+                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS)</h3>
                 <div class="overflow-x-auto rounded-lg shadow">
                     <table class="w-full text-left border-collapse">
                         <thead>
@@ -160,171 +164,509 @@
                                 <th class="p-4 font-semibold text-white">Level Range</th>
                                 <th class="p-4 font-semibold text-white">Item Name</th>
                                 <th class="p-4 font-semibold text-white">Source</th>
-                                <th class="p-4 font-semibold text-white">Type</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
-                                <td class="p-4">1–15</td>
-                                <td class="p-4 font-bold text-green-400">Large Wood Chopper</td>
-                                <td class="p-4 text-gray-300">Quest / Drop</td>
-                                <td class="p-4 text-gray-300">2H Axe</td>
-                            </tr>
-                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
+                            <tr class="border-b border-gray-700 bg-gray-900">
                                 <td class="p-4">16–30</td>
                                 <td class="p-4 font-bold text-blue-400">Smite's Mighty Hammer</td>
-                                <td class="p-4 text-gray-300">Deadmines (Dungeon)</td>
-                                <td class="p-4 text-gray-300">2H Mace</td>
+                                <td class="p-4 text-gray-300">Deadmines</td>
                             </tr>
-                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
+                            <tr class="border-b border-gray-700 bg-[#1e293b]">
                                 <td class="p-4">31–45</td>
                                 <td class="p-4 font-bold text-blue-400">Whirlwind Axe</td>
-                                <td class="p-4 text-gray-300">Warrior Class Quest (Lv 30)</td>
-                                <td class="p-4 text-gray-300">2H Axe</td>
-                            </tr>
-                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
-                                <td class="p-4">46–60</td>
-                                <td class="p-4 font-bold text-blue-400">Executioner's Cleaver</td>
-                                <td class="p-4 text-gray-300">BoE World Drop (AH)</td>
-                                <td class="p-4 text-gray-300">2H Axe</td>
+                                <td class="p-4 text-gray-300">Warrior Class Quest</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
-            <!-- 6. Class Tips & Macros -->
             <div class="mb-8">
-                <h3 class="text-2xl font-bold text-white mb-4">6. Class Tips & Macros</h3>
+                <h3 class="text-2xl font-bold text-white mb-4">6. Class Macros</h3>
                 <div class="bg-gray-900 border border-gray-700 p-5 rounded-lg font-mono text-sm text-gray-300">
-                    <p class="text-green-400 mb-2">// Stance Dance: Battle Stance + Charge</p>
-                    <p class="mb-4">#showtooltip Charge<br>
-                    /cast [nocombat,nostance:1] Battle Stance;<br>
-                    /cast [nocombat,stance:1] Charge</p>
-                    
-                    <p class="text-green-400 mb-2">// Start Attack Macro (Put this on all main abilities)</p>
-                    <p>#showtooltip Mortal Strike<br>
-                    /startattack<br>
-                    /cast Mortal Strike</p>
+                    <p class="mb-2">#showtooltip Charge<br>/cast [nocombat,nostance:1] Battle Stance;<br>/cast [nocombat,stance:1] Charge</p>
                 </div>
             </div>
         </section>
 
-        <!-- PALADIN CLASS HUB -->
+        <!-- ================= PALADIN ================= -->
         <section id="paladin" class="tab-pane">
             <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
-                <h2 class="text-4xl font-extrabold text-pink-400">Paladin Guide</h2>
+                <h2 class="text-4xl font-extrabold text-c-paladin">Paladin Guide</h2>
                 <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
             </div>
-
-            <!-- 1. Quick Facts -->
             <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
                 <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvE):</strong> Human (Ally) / Undead (Horde)</div>
-                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvP):</strong> Dwarf (Ally) / Tauren (Horde)</div>
-                    <div><strong class="text-yellow-400 block mb-1">Leveling Spec:</strong> Retribution</div>
-                    <div><strong class="text-yellow-400 block mb-1">Difficulty:</strong> Easy (Very High Survivability)</div>
-                    <div><strong class="text-yellow-400 block mb-1">Professions:</strong> Mining / Engineering</div>
+                    <div><strong class="text-c-paladin block mb-1">Best Race (PvE):</strong> Human / Undead</div>
+                    <div><strong class="text-c-paladin block mb-1">Best Race (PvP):</strong> Dwarf / Tauren</div>
+                    <div><strong class="text-c-paladin block mb-1">Leveling Spec:</strong> Retribution</div>
+                    <div><strong class="text-c-paladin block mb-1">Difficulty:</strong> Easy</div>
                 </div>
             </div>
-
-            <!-- 2. Talent Tree & Leveling Order -->
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
-                <div class="bg-wow-panel p-4 rounded border-l-4 border-pink-400">
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-[#F58CBA]">
                     <ul class="space-y-4">
-                        <li><strong class="text-white text-lg block">Level 10–19 (Retribution):</strong> Divine Strength (5/5), Improved Seal of the Crusader (4/5) <br><span class="text-sm text-gray-400">Divine Strength gives raw attack power. Improved SotC is great for longer fights before you get Command.</span></li>
-                        <li><strong class="text-white text-lg block">Level 20–29 (Retribution):</strong> Seal of Command (1/1), Pursuit of Justice (2/2), Conviction (5/5) <br><span class="text-sm text-gray-400">Seal of Command at level 20 is your biggest power spike. Pursuit of Justice speeds up leveling massively.</span></li>
-                        <li><strong class="text-white text-lg block">Level 30–39 (Retribution):</strong> Sanctity Aura (1/1), Two-Handed Weapon Specialization (3/3), Vengeance (5/5) <br><span class="text-sm text-gray-400">Sanctity Aura boosts all your holy damage. Vengeance gives huge burst potential after a critical strike.</span></li>
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Divine Strength (5/5), Improved Seal of the Crusader (4/5)</li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Seal of Command (1/1), Pursuit of Justice (2/2), Conviction (5/5)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Sanctity Aura (1/1), Two-Handed Weapon Spec (3/3), Vengeance (5/5)</li>
                     </ul>
                 </div>
             </div>
-
-            <!-- 3. Rotation & Playstyle -->
             <div class="mb-8">
                 <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="bg-wow-panel p-5 rounded">
-                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Single Target (Level 20+)</h4>
-                        <p class="leading-relaxed">Keep Blessing of Might active. Open with <strong>Seal of the Crusader</strong> &rarr; <strong>Judgement</strong> (to apply the holy damage taken debuff). Immediately cast <strong>Seal of Command</strong> and start auto-attacking. Judge Command right before the seal expires or if the mob runs away.</p>
+                        <h4 class="font-bold text-c-paladin mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Keep Blessing of Might active. Seal of the Crusader &rarr; Judgement &rarr; Seal of Command &rarr; Auto Attack.</p>
                     </div>
                     <div class="bg-wow-panel p-5 rounded">
-                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Multi-Target & Survival</h4>
-                        <p class="leading-relaxed">Paladins lack AoE damage until Consecration (if specced). Focus on surviving: use <strong>Retribution Aura</strong> to reflect damage. If your health gets low, cast <strong>Hammer of Justice</strong> (Stun) to safely cast <strong>Holy Light</strong>. For emergencies, use <strong>Divine Shield</strong> (Bubble) to heal to full un-interrupted.</p>
+                        <h4 class="font-bold text-c-paladin mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">Retribution Aura to reflect damage. Hammer of Justice to heal safely. Divine Shield for emergencies.</p>
                     </div>
                 </div>
             </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-white font-bold">Weapon DPS</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-green-400 font-bold">Strength</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-purple-400 font-bold">Intellect</span>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS)</h3>
+                <div class="overflow-x-auto rounded-lg shadow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-800 border-b border-gray-600">
+                                <th class="p-4 font-semibold text-white">Level Range</th>
+                                <th class="p-4 font-semibold text-white">Item Name</th>
+                                <th class="p-4 font-semibold text-white">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700 bg-gray-900">
+                                <td class="p-4">16–30</td>
+                                <td class="p-4 font-bold text-blue-400">Verigan's Fist</td>
+                                <td class="p-4 text-gray-300">Paladin Class Quest (Level 20)</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b]">
+                                <td class="p-4">31–45</td>
+                                <td class="p-4 font-bold text-blue-400">Bonebiter</td>
+                                <td class="p-4 text-gray-300">Scarlet Monastery Quest</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">6. Class Macros</h3>
+                <div class="bg-gray-900 border border-gray-700 p-5 rounded-lg font-mono text-sm text-gray-300">
+                    <p class="mb-2">#showtooltip Divine Shield<br>/castsequence reset=5 Divine Shield, Holy Light</p>
+                </div>
+            </div>
+        </section>
 
-            <!-- 4. Stat Priority -->
+        <!-- ================= HUNTER ================= -->
+        <section id="hunter" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-hunter">Hunter Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-hunter block mb-1">Best Race (PvE):</strong> Troll / Night Elf</div>
+                    <div><strong class="text-c-hunter block mb-1">Best Race (PvP):</strong> Orc / Dwarf</div>
+                    <div><strong class="text-c-hunter block mb-1">Leveling Spec:</strong> Beast Mastery</div>
+                    <div><strong class="text-c-hunter block mb-1">Difficulty:</strong> Very Easy</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-[#ABD473]">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Endurance Training (5/5), Thick Hide (3/3), Improved Revive Pet (2/2) <br><span class="text-sm text-gray-400">Makes your pet an unkillable tank while leveling.</span></li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Pathfinding (2/2), Bestial Swiftness (1/1), Unleashed Fury (5/5), Ferocity (2/5)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Ferocity (5/5), Intimidation (1/1), Frenzy (5/5), Bestial Wrath (1/1) <br><span class="text-sm text-gray-400">Bestial Wrath turns your pet into a literal god every 2 minutes.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-hunter mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Hunter's Mark &rarr; Send Pet &rarr; Serpent Sting &rarr; Auto Shot. Only use Multi-Shot/Arcane Shot if you have excess mana. Let your pet hold aggro.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-hunter mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">Set pet on one target, trap a second with Freezing Trap, and kite/shoot a third. Feign Death if you pull aggro from your pet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-white font-bold">Ranged Weapon DPS</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-purple-400 font-bold">Intellect</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS)</h3>
+                <div class="overflow-x-auto rounded-lg shadow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-800 border-b border-gray-600">
+                                <th class="p-4 font-semibold text-white">Level Range</th>
+                                <th class="p-4 font-semibold text-white">Item Name</th>
+                                <th class="p-4 font-semibold text-white">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700 bg-gray-900">
+                                <td class="p-4">16–30</td>
+                                <td class="p-4 font-bold text-blue-400">Venomstrike</td>
+                                <td class="p-4 text-gray-300">Wailing Caverns (Dungeon)</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b]">
+                                <td class="p-4">31–45</td>
+                                <td class="p-4 font-bold text-blue-400">Bow of Searing Arrows</td>
+                                <td class="p-4 text-gray-300">BoE World Drop (AH)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">6. Class Macros</h3>
+                <div class="bg-gray-900 border border-gray-700 p-5 rounded-lg font-mono text-sm text-gray-300">
+                    <p class="mb-2">#showtooltip Hunter's Mark<br>/petattack<br>/cast Hunter's Mark</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ROGUE ================= -->
+        <section id="rogue" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-rogue">Rogue Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-rogue block mb-1">Best Race (PvE):</strong> Human / Orc</div>
+                    <div><strong class="text-c-rogue block mb-1">Best Race (PvP):</strong> Dwarf / Undead</div>
+                    <div><strong class="text-c-rogue block mb-1">Leveling Spec:</strong> Combat Swords</div>
+                    <div><strong class="text-c-rogue block mb-1">Difficulty:</strong> Medium</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-[#FFF569]">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Improved Sinister Strike (2/2), Improved Gouge (3/3), Deflection (4/5)</li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Deflection (5/5), Riposte (1/1), Precision (5/5), Endurance (1/2)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Dual Wield Spec (4/5), Blade Flurry (1/1), Sword Spec (5/5) <br><span class="text-sm text-gray-400">Sword Spec and Blade Flurry turn you into a leveling machine.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-rogue mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Stealth &rarr; Garrote/Cheap Shot &rarr; Sinister Strike to 1-2 combo points &rarr; Slice and Dice. Maintain SnD at all times. Eviscerate at 5 combo points if the mob will survive it.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-rogue mb-3 text-lg">Multi-Target & Survival</h4>
+                        <p class="leading-relaxed">Pop Blade Flurry and Evasion to fight 2-3 mobs at once. If things go bad, use Gouge, run away, and cast Sprint or Vanish.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-white font-bold">Weapon DPS (Main Hand)</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-green-400 font-bold">Strength</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS)</h3>
+                <div class="overflow-x-auto rounded-lg shadow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-800 border-b border-gray-600">
+                                <th class="p-4 font-semibold text-white">Level Range</th>
+                                <th class="p-4 font-semibold text-white">Item Name</th>
+                                <th class="p-4 font-semibold text-white">Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700 bg-gray-900">
+                                <td class="p-4">16–30</td>
+                                <td class="p-4 font-bold text-blue-400">Cruel Barb</td>
+                                <td class="p-4 text-gray-300">Deadmines (Dungeon)</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b]">
+                                <td class="p-4">31–45</td>
+                                <td class="p-4 font-bold text-blue-400">Thrash Blade</td>
+                                <td class="p-4 text-gray-300">Maraudon Quest (Level 45)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PRIEST ================= -->
+        <section id="priest" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-priest">Priest Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-priest block mb-1">Best Race (PvE):</strong> Dwarf / Troll</div>
+                    <div><strong class="text-c-priest block mb-1">Best Race (PvP):</strong> Dwarf / Undead</div>
+                    <div><strong class="text-c-priest block mb-1">Leveling Spec:</strong> Shadow (Wand Spec)</div>
+                    <div><strong class="text-c-priest block mb-1">Difficulty:</strong> Easy (Low Downtime)</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-white">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Spirit Tap (5/5), Wand Specialization (5/5) <br><span class="text-sm text-gray-400">This combination gives you zero mana issues. Wands deal massive damage early on.</span></li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Shadow Focus (5/5), Mind Flay (1/1), Improved Shadow Word: Pain (2/2), Shadow Weaving (2/5)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Shadow Weaving (5/5), Vampiric Embrace (1/1), Darkness (5/5), Shadowform (1/1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-priest mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Power Word: Shield &rarr; Mind Blast &rarr; Shadow Word: Pain &rarr; Auto-attack with Wand until dead. Let Spirit Tap regen your mana while wanding.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-priest mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">Dot multiple enemies with Shadow Word: Pain, use Psychic Scream to fear them away, and nuke them down one by one. Heal with Renew.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-white font-bold">Wand DPS</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-gray-300 font-bold">Spirit</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-purple-400 font-bold">Intellect</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SHAMAN ================= -->
+        <section id="shaman" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-shaman">Shaman Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-shaman block mb-1">Best Race (PvE):</strong> Orc / Troll</div>
+                    <div><strong class="text-c-shaman block mb-1">Best Race (PvP):</strong> Orc / Tauren</div>
+                    <div><strong class="text-c-shaman block mb-1">Leveling Spec:</strong> Enhancement</div>
+                    <div><strong class="text-c-shaman block mb-1">Difficulty:</strong> Medium</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-blue-500">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Shield Spec (5/5), Thundering Strikes (5/5)</li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Two-Handed Axes/Maces (1/1), Flurry (5/5), Anticipation (4/5)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Windfury Weapon, Stormstrike (1/1), Elemental Weapons (3/3)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-shaman mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Keep Rockbiter (1-29) or Windfury (30+) active on weapon. Drop Searing Totem. Earth Shock on cooldown. Auto attack.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-shaman mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">Stoneclaw Totem to taunt off you. Magma Totem for AoE. Healing Stream Totem to stay alive.</p>
+                    </div>
+                </div>
+            </div>
             <div class="mb-8 bg-wow-panel p-6 rounded">
                 <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
                 <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
                     <span class="text-white font-bold">Weapon DPS</span> <span class="text-gray-500">&gt;</span>
                     <span class="text-green-400 font-bold">Strength</span> <span class="text-gray-500">&gt;</span>
                     <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MAGE ================= -->
+        <section id="mage" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-mage">Mage Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-mage block mb-1">Best Race (PvE):</strong> Gnome / Troll</div>
+                    <div><strong class="text-c-mage block mb-1">Best Race (PvP):</strong> Gnome / Undead</div>
+                    <div><strong class="text-c-mage block mb-1">Leveling Spec:</strong> Frost (AoE or Single)</div>
+                    <div><strong class="text-c-mage block mb-1">Difficulty:</strong> Medium (High if AoE)</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-cyan-400">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Improved Frostbolt (5/5), Frostbite (3/3), Ice Shards (2/5)</li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Ice Shards (5/5), Cold Snap (1/1), Piercing Ice (3/3), Shatter (1/5)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Shatter (5/5), Ice Block (1/1), Cone of Cold (1/1), Ice Barrier (1/1) <br><span class="text-sm text-gray-400">Ice Barrier makes you incredibly durable against melee attacks.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-mage mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Keep Ice Barrier up. Cast Frostbolt from max range. If they get close, Frost Nova, take distance, and resume Frostbolt.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-mage mb-3 text-lg">AoE Grinding (Level 22+)</h4>
+                        <p class="leading-relaxed">Gather melee mobs &rarr; Frost Nova &rarr; Blink away &rarr; Blizzard. Cone of Cold to slow if Blizzard breaks. Very fast leveling if mastered.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-purple-400 font-bold">Intellect</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-gray-300 font-bold">Spirit</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WARLOCK ================= -->
+        <section id="warlock" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-warlock">Warlock Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-warlock block mb-1">Best Race (PvE):</strong> Gnome / Orc</div>
+                    <div><strong class="text-c-warlock block mb-1">Best Race (PvP):</strong> Gnome / Undead</div>
+                    <div><strong class="text-c-warlock block mb-1">Leveling Spec:</strong> Affliction (Drain Tanking)</div>
+                    <div><strong class="text-c-warlock block mb-1">Difficulty:</strong> Easy (Infinite Mana)</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-[#9482C9]">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Improved Corruption (5/5), Suppression (4/5)</li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Nightfall (2/2), Grim Reach (2/2), Siphon Life (1/1)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Shadow Mastery (5/5), Dark Pact (1/1) <br><span class="text-sm text-gray-400">Dark Pact lets you drain mana from your pet, eliminating downtime forever.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-warlock mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Send Voidwalker (1-39) or Succubus (40+). Cast Siphon Life &rarr; Curse of Agony &rarr; Corruption. Life Tap for mana, Drain Life to heal it back.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-warlock mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">DoT up 2-3 targets at once. Fear one, let the Voidwalker tank the second, and drain tank the third yourself.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-yellow-600 font-bold">Stamina</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-purple-400 font-bold">Intellect</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-gray-300 font-bold">Spirit</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DRUID ================= -->
+        <section id="druid" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-c-druid">Druid Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-c-druid block mb-1">Best Race (PvE):</strong> Night Elf / Tauren</div>
+                    <div><strong class="text-c-druid block mb-1">Best Race (PvP):</strong> Night Elf / Tauren</div>
+                    <div><strong class="text-c-druid block mb-1">Leveling Spec:</strong> Feral Combat</div>
+                    <div><strong class="text-c-druid block mb-1">Difficulty:</strong> Medium (Very High Mobility)</div>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-orange-400">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Ferocity (5/5), Feral Instinct (5/5)</li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Feline Swiftness (2/2), Feral Charge (1/1), Sharpened Claws (3/3), Blood Frenzy (2/2)</li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Faerie Fire Feral (1/1), Heart of the Wild (5/5), Leader of the Pack (1/1) <br><span class="text-sm text-gray-400">Cat form is your main leveling tool from level 20 to 60.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-druid mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Stealth (Prowl) &rarr; Ravage (opener) &rarr; Claw to 5 combo points &rarr; Ferocious Bite. Keep Faerie Fire active.</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-c-druid mb-3 text-lg">Multi-Target</h4>
+                        <p class="leading-relaxed">Switch to Bear Form. Use Swipe for AoE damage and Demoralizing Roar to reduce incoming damage. Shift out to heal if necessary.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-green-400 font-bold">Strength</span> <span class="text-gray-500">&gt;</span>
                     <span class="text-yellow-600 font-bold">Stamina</span> <span class="text-gray-500">&gt;</span>
                     <span class="text-purple-400 font-bold">Intellect</span>
                 </div>
-                <p class="text-sm mt-4 text-gray-400 max-w-2xl">Weapon DPS is king for Seal of Command. Strength increases your attack power. A small amount of Intellect is useful so you don't run out of mana for your Seals and Heals, but physical damage stats come first.</p>
-            </div>
-
-            <!-- 5. Equipment (Leveling BiS) -->
-            <div class="mb-8">
-                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS Weapons)</h3>
-                <div class="overflow-x-auto rounded-lg shadow">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-gray-800 border-b border-gray-600">
-                                <th class="p-4 font-semibold text-white">Level Range</th>
-                                <th class="p-4 font-semibold text-white">Item Name</th>
-                                <th class="p-4 font-semibold text-white">Source</th>
-                                <th class="p-4 font-semibold text-white">Type</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
-                                <td class="p-4">1–15</td>
-                                <td class="p-4 font-bold text-green-400">Wooden Mallet</td>
-                                <td class="p-4 text-gray-300">Early Quests / Drops</td>
-                                <td class="p-4 text-gray-300">2H Mace</td>
-                            </tr>
-                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
-                                <td class="p-4">16–30</td>
-                                <td class="p-4 font-bold text-blue-400">Verigan's Fist</td>
-                                <td class="p-4 text-gray-300">Paladin Class Quest (Level 20)</td>
-                                <td class="p-4 text-gray-300">2H Mace</td>
-                            </tr>
-                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
-                                <td class="p-4">31–45</td>
-                                <td class="p-4 font-bold text-blue-400">Bonebiter</td>
-                                <td class="p-4 text-gray-300">In the Name of the Light (Scarlet Monastery)</td>
-                                <td class="p-4 text-gray-300">2H Axe</td>
-                            </tr>
-                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
-                                <td class="p-4">46–60</td>
-                                <td class="p-4 font-bold text-blue-400">Lightforge Blade</td>
-                                <td class="p-4 text-gray-300">Quest / World Drop</td>
-                                <td class="p-4 text-gray-300">2H Sword</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- 6. Class Tips & Macros -->
-            <div class="mb-8">
-                <h3 class="text-2xl font-bold text-white mb-4">6. Class Tips & Macros</h3>
-                <div class="bg-gray-900 border border-gray-700 p-5 rounded-lg font-mono text-sm text-gray-300">
-                    <p class="text-green-400 mb-2">// Start Attack / Auto-Judge Macro</p>
-                    <p class="mb-4">#showtooltip Judgement<br>
-                    /startattack<br>
-                    /cast Judgement</p>
-                    
-                    <p class="text-green-400 mb-2">// Emergency Bubble + Heal (Press Twice)</p>
-                    <p>#showtooltip Divine Shield<br>
-                    /castsequence reset=5 Divine Shield, Holy Light</p>
-                </div>
+                <p class="text-sm mt-4 text-gray-400 max-w-2xl">Weapon DPS does not matter for Feral forms! Only the raw stats (Agility/Strength) on the weapon count towards your damage.</p>
             </div>
         </section>
 
@@ -362,6 +704,24 @@
         document.addEventListener("DOMContentLoaded", () => {
             const navBtns = document.querySelectorAll('.nav-btn[data-target]');
             const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            const colorClasses = [
+                'text-c-warrior', 'text-c-paladin', 'text-c-hunter', 
+                'text-c-rogue', 'text-c-priest', 'text-c-shaman', 
+                'text-c-mage', 'text-c-warlock', 'text-c-druid'
+            ];
+
+            const targetColors = {
+                'warrior': 'text-c-warrior',
+                'paladin': 'text-c-paladin',
+                'hunter': 'text-c-hunter',
+                'rogue': 'text-c-rogue',
+                'priest': 'text-c-priest',
+                'shaman': 'text-c-shaman',
+                'mage': 'text-c-mage',
+                'warlock': 'text-c-warlock',
+                'druid': 'text-c-druid'
+            };
 
             navBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -369,13 +729,21 @@
                     
                     // Reset all tabs
                     tabPanes.forEach(p => p.classList.remove('active'));
+                    
+                    // Reset all buttons
                     navBtns.forEach(b => {
-                        b.classList.remove('text-yellow-400', 'text-pink-400', 'font-bold');
-                        if(b.parentElement.tagName !== 'LI') { // Keep top nav baseline color
+                        b.classList.remove('font-bold', 'text-yellow-400');
+                        colorClasses.forEach(c => b.classList.remove(c));
+                        
+                        // Give everything base gray text except the class buttons on home screen if we want to preserve their colors
+                        if(b.parentElement.tagName === 'LI' && b.parentElement.parentElement.parentElement.id !== 'home') {
                             b.classList.add('text-gray-400');
-                        } else {
-                            if(b.getAttribute('data-target') === 'warrior') b.classList.add('text-white');
-                            if(b.getAttribute('data-target') === 'paladin') b.classList.add('text-pink-300');
+                        } else if(b.parentElement.tagName === 'NAV') {
+                            b.classList.add('text-gray-400');
+                        } else if(b.parentElement.classList.contains('grid')) {
+                             // Let the home buttons keep their colors
+                             const tId = b.getAttribute('data-target');
+                             if(targetColors[tId]) b.classList.add(targetColors[tId]);
                         }
                     });
 
@@ -383,17 +751,18 @@
                     const targetPane = document.getElementById(targetId);
                     if(targetPane) {
                         targetPane.classList.add('active');
+                        // Scroll to top when changing tabs
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
 
-                    // Highlight active nav button
-                    const activeNavBtns = document.querySelectorAll(`.nav-btn[data-target="${targetId}"]`);
+                    // Highlight active nav buttons in header
+                    const activeNavBtns = document.querySelectorAll(`header .nav-btn[data-target="${targetId}"]`);
                     activeNavBtns.forEach(activeBtn => {
-                         activeBtn.classList.remove('text-gray-400', 'text-white', 'text-pink-300');
+                         activeBtn.classList.remove('text-gray-400');
                          activeBtn.classList.add('font-bold');
                          
-                         // Specific highlight colors based on class
-                         if(targetId === 'paladin') {
-                             activeBtn.classList.add('text-pink-400');
+                         if(targetColors[targetId]) {
+                             activeBtn.classList.add(targetColors[targetId]);
                          } else {
                              activeBtn.classList.add('text-yellow-400');
                          }
