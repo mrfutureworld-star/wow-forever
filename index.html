@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoW Forever - The Ultimate World of Warcraft Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #cbd5e1; }
+        .wow-gold { color: #fbbf24; }
+        .bg-wow-panel { background-color: #1e293b; border: 1px solid #334155; }
+        .tab-pane { display: none; }
+        .tab-pane.active { display: block; }
+        .nav-btn { cursor: pointer; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header & Nav -->
+    <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-400 uppercase tracking-wider">WoW Forever</h1>
+            <nav class="flex space-x-6 overflow-x-auto">
+                <button class="nav-btn text-yellow-400 font-semibold" data-target="home">Home</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="races">Races</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="warrior">Warrior Guide</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="guides">General Guides</button>
+                <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="gear">Gear & Tools</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        
+        <!-- HOME TAB -->
+        <section id="home" class="tab-pane active">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-white mb-4">Welcome to WoW Forever</h2>
+                <p class="text-xl text-gray-400">Your ultimate resource for leveling, BiS gear, and mastering your class.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-wow-panel p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Classes</h3>
+                    <ul class="space-y-2">
+                        <li><button class="nav-btn text-white hover:text-yellow-400" data-target="warrior">Warrior</button></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Paladin (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Hunter (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Rogue (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Priest (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Shaman (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Mage (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Warlock (Coming Soon)</span></li>
+                        <li><span class="text-gray-500 cursor-not-allowed">Druid (Coming Soon)</span></li>
+                    </ul>
+                </div>
+                <div class="bg-wow-panel p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-2">Popular Guides</h3>
+                    <ul class="space-y-2 list-disc pl-5">
+                        <li>1-60 Speed Leveling Strategy</li>
+                        <li>Cozy Sleeping Bag Questline</li>
+                        <li>Best Addons for Classic</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- RACES TAB -->
+        <section id="races" class="tab-pane">
+            <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-700 pb-2">Races & Class Combinations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-wow-panel p-4 rounded border-t-4 border-blue-500">
+                    <h4 class="text-xl font-bold text-blue-400">Alliance</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li><strong>Human:</strong> Warrior, Paladin, Rogue, Priest, Mage, Warlock</li>
+                        <li><strong>Dwarf:</strong> Warrior, Paladin, Hunter, Rogue, Priest</li>
+                        <li><strong>Night Elf:</strong> Warrior, Hunter, Rogue, Priest, Druid</li>
+                        <li><strong>Gnome:</strong> Warrior, Rogue, Mage, Warlock</li>
+                        <li><strong>Skyborne (New):</strong> Warrior, Hunter, Rogue, Druid, Mage</li>
+                    </ul>
+                </div>
+                <div class="bg-wow-panel p-4 rounded border-t-4 border-red-500">
+                    <h4 class="text-xl font-bold text-red-400">Horde</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li><strong>Orc:</strong> Warrior, Hunter, Rogue, Shaman, Warlock</li>
+                        <li><strong>Undead:</strong> Warrior, Paladin, Rogue, Priest, Mage, Warlock</li>
+                        <li><strong>Tauren:</strong> Warrior, Paladin, Hunter, Shaman, Druid</li>
+                        <li><strong>Troll:</strong> Warrior, Hunter, Rogue, Priest, Shaman, Mage</li>
+                        <li><strong>Skyborne (New):</strong> Warrior, Hunter, Rogue, Druid, Shaman</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- WARRIOR CLASS HUB -->
+        <section id="warrior" class="tab-pane">
+            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                <h2 class="text-4xl font-extrabold text-[#C79C6E]">Warrior Guide</h2>
+                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Level 1-60</span>
+            </div>
+
+            <!-- 1. Quick Facts -->
+            <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">1. Quick Facts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvE):</strong> Human (Ally) / Orc (Horde)</div>
+                    <div><strong class="text-yellow-400 block mb-1">Best Race (PvP):</strong> Gnome (Ally) / Orc (Horde)</div>
+                    <div><strong class="text-yellow-400 block mb-1">Leveling Spec:</strong> Arms</div>
+                    <div><strong class="text-yellow-400 block mb-1">Difficulty:</strong> Hard (Gear Dependent)</div>
+                    <div><strong class="text-yellow-400 block mb-1">Professions:</strong> Mining / Engineering</div>
+                </div>
+            </div>
+
+            <!-- 2. Talent Tree & Leveling Order -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">2. Talent Tree & Leveling Order</h3>
+                <div class="bg-wow-panel p-4 rounded border-l-4 border-[#C79C6E]">
+                    <ul class="space-y-4">
+                        <li><strong class="text-white text-lg block">Level 10–19:</strong> Cruelty (5/5), Deflection (4/5) <br><span class="text-sm text-gray-400">Focus on getting flat crit chance first for consistent rage generation.</span></li>
+                        <li><strong class="text-white text-lg block">Level 20–29:</strong> Tactical Mastery (5/5), Improved Overpower (2/2), Deep Wounds (3/3) <br><span class="text-sm text-gray-400">Tactical Mastery is mandatory for smooth stance dancing.</span></li>
+                        <li><strong class="text-white text-lg block">Level 30–39:</strong> Impale (2/2), Sweeping Strikes (1/1), Weapon Mastery (2/2), Mortal Strike (1/1) <br><span class="text-sm text-gray-400">Sweeping Strikes and Mortal Strike are your biggest leveling power spikes.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Rotation & Playstyle -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">3. Rotation & Playstyle</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Single Target</h4>
+                        <p class="leading-relaxed">Charge in &rarr; Rend &rarr; Mortal Strike (on cooldown) &rarr; Overpower (when it procs) &rarr; Sunder Armor (if target lives long enough). Use Heroic Strike only if you have excess rage (over 60).</p>
+                    </div>
+                    <div class="bg-wow-panel p-5 rounded">
+                        <h4 class="font-bold text-yellow-400 mb-3 text-lg">Multi-Target & Survival</h4>
+                        <p class="leading-relaxed">Pop Sweeping Strikes, switch to Berserker Stance, use Whirlwind, and Cleave. Hamstring kiting is crucial to survive against hard-hitting mobs. Save Bloodrage for emergency rage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Stat Priority -->
+            <div class="mb-8 bg-wow-panel p-6 rounded">
+                <h3 class="text-2xl font-bold text-white mb-4">4. Stat Priority</h3>
+                <div class="flex flex-wrap items-center space-x-2 md:space-x-4 text-lg md:text-xl bg-gray-900 p-4 rounded-lg inline-flex">
+                    <span class="text-white font-bold">Weapon DPS</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-green-400 font-bold">Strength</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-blue-400 font-bold">Agility</span> <span class="text-gray-500">&gt;</span>
+                    <span class="text-yellow-600 font-bold">Stamina</span>
+                </div>
+                <p class="text-sm mt-4 text-gray-400 max-w-2xl">Always prioritize upgrading your weapon. A higher DPS weapon will increase your leveling speed significantly more than any single piece of armor.</p>
+            </div>
+
+            <!-- 5. Equipment (Leveling BiS) -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">5. Equipment (Leveling BiS Weapons)</h3>
+                <div class="overflow-x-auto rounded-lg shadow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-800 border-b border-gray-600">
+                                <th class="p-4 font-semibold text-white">Level Range</th>
+                                <th class="p-4 font-semibold text-white">Item Name</th>
+                                <th class="p-4 font-semibold text-white">Source</th>
+                                <th class="p-4 font-semibold text-white">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
+                                <td class="p-4">1–15</td>
+                                <td class="p-4 font-bold text-green-400">Large Wood Chopper</td>
+                                <td class="p-4 text-gray-300">Quest / Drop</td>
+                                <td class="p-4 text-gray-300">2H Axe</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
+                                <td class="p-4">16–30</td>
+                                <td class="p-4 font-bold text-blue-400">Smite's Mighty Hammer</td>
+                                <td class="p-4 text-gray-300">Deadmines (Dungeon)</td>
+                                <td class="p-4 text-gray-300">2H Mace</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-gray-900 hover:bg-gray-800 transition">
+                                <td class="p-4">31–45</td>
+                                <td class="p-4 font-bold text-blue-400">Whirlwind Axe</td>
+                                <td class="p-4 text-gray-300">Warrior Class Quest (Lv 30)</td>
+                                <td class="p-4 text-gray-300">2H Axe</td>
+                            </tr>
+                            <tr class="border-b border-gray-700 bg-[#1e293b] hover:bg-gray-800 transition">
+                                <td class="p-4">46–60</td>
+                                <td class="p-4 font-bold text-blue-400">Executioner's Cleaver</td>
+                                <td class="p-4 text-gray-300">BoE World Drop (AH)</td>
+                                <td class="p-4 text-gray-300">2H Axe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 6. Class Tips & Macros -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">6. Class Tips & Macros</h3>
+                <div class="bg-gray-900 border border-gray-700 p-5 rounded-lg font-mono text-sm text-gray-300">
+                    <p class="text-green-400 mb-2">// Stance Dance: Battle Stance + Charge</p>
+                    <p class="mb-4">#showtooltip Charge<br>
+                    /cast [nocombat,nostance:1] Battle Stance;<br>
+                    /cast [nocombat,stance:1] Charge</p>
+                    
+                    <p class="text-green-400 mb-2">// Start Attack Macro (Put this on all main abilities)</p>
+                    <p>#showtooltip Mortal Strike<br>
+                    /startattack<br>
+                    /cast Mortal Strike</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUIDES TAB -->
+        <section id="guides" class="tab-pane">
+            <h2 class="text-3xl font-bold text-white mb-6">General Guides</h2>
+            <div class="bg-wow-panel p-6 rounded-lg">
+                <p class="mb-4 text-lg">Welcome to the general guides section. Here you will find:</p>
+                <ul class="list-disc pl-6 space-y-3 text-gray-300">
+                    <li><strong class="text-white">1-60 Speed Leveling:</strong> Optimized zone orders and quest skipping strategies.</li>
+                    <li><strong class="text-white">Cozy Sleeping Bag:</strong> Step-by-step to unlock the massive XP buff sleeping bag.</li>
+                    <li><strong class="text-white">Legacy System:</strong> Comprehensive guide to account-wide unlocks and rep sharing.</li>
+                    <li><strong class="text-white">Addons:</strong> Best configurations for Questie, Bagnon, Details!, and WeakAuras.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- GEAR TAB -->
+        <section id="gear" class="tab-pane">
+            <h2 class="text-3xl font-bold text-white mb-6">Gear & Tools</h2>
+            <div class="bg-wow-panel p-10 rounded-lg text-center border-dashed border-2 border-gray-600">
+                <svg class="w-16 h-16 mx-auto text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <p class="text-xl text-gray-400">Coming soon: Interactive BiS lists, Supply Crate locations, and Pre-Raid gear tables.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 border-t border-gray-800 text-center py-6 mt-auto">
+        <p class="text-gray-500 text-sm">© 2026 WoW Forever Guide. Created in HTML, Tailwind CSS & JavaScript.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const navBtns = document.querySelectorAll('.nav-btn[data-target]');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            navBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetId = btn.getAttribute('data-target');
+                    
+                    // Reset all tabs
+                    tabPanes.forEach(p => p.classList.remove('active'));
+                    navBtns.forEach(b => {
+                        b.classList.remove('text-yellow-400', 'font-semibold');
+                        if(b.parentElement.tagName !== 'LI') { // Don't gray out the sidebar links
+                            b.classList.add('text-gray-400');
+                        }
+                    });
+
+                    // Activate the target tab
+                    const targetPane = document.getElementById(targetId);
+                    if(targetPane) {
+                        targetPane.classList.add('active');
+                    }
+
+                    // Highlight active nav button (if it's in the top nav)
+                    const activeNavBtns = document.querySelectorAll(`.nav-btn[data-target="${targetId}"]`);
+                    activeNavBtns.forEach(activeBtn => {
+                         activeBtn.classList.add('text-yellow-400', 'font-semibold');
+                         activeBtn.classList.remove('text-gray-400');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
