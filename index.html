@@ -690,124 +690,412 @@
 
         <!-- GUIDES TAB -->
         <section id="guides" class="tab-pane">
-            <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
-                <h2 class="text-4xl font-extrabold text-white">General Guides</h2>
-                <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Updated for 2026</span>
-            </div>
+            
+            <!-- MAIN GUIDES OVERVIEW -->
+            <div id="guide-view-main">
+                <div class="flex items-center space-x-4 mb-6 border-b border-gray-700 pb-4">
+                    <h2 class="text-4xl font-extrabold text-white">General Guides</h2>
+                    <span class="px-3 py-1 bg-gray-800 text-sm rounded-full text-gray-300 border border-gray-600">Updated for 2026</span>
+                </div>
 
-            <div class="grid grid-cols-1 gap-8">
-                
-                <!-- 1. Speed Leveling -->
-                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-yellow-500">
-                    <h3 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center"><span class="mr-2">▶</span> 1-60 Speed Leveling Strategy</h3>
-                    <p class="text-gray-300 mb-4">The golden rule of speed leveling: travel less, kill more. Skip quests that have terrible drop rates or require you to walk across multiple zones.</p>
+                <div class="grid grid-cols-1 gap-8">
                     
-                    <div class="grid md:grid-cols-2 gap-6 mb-4">
-                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
-                            <h4 class="text-xl font-bold text-blue-400 mb-2">Alliance Route</h4>
-                            <ul class="space-y-2 text-gray-300 text-sm">
-                                <li><strong class="text-white">1–10:</strong> Starter Zone</li>
-                                <li><strong class="text-white">10–14:</strong> Westfall / Loch Modan</li>
-                                <li><strong class="text-white">14–20:</strong> Darkshore (Highly optimized quest routing)</li>
-                                <li><strong class="text-white">20–30:</strong> Redridge Mountains & Duskwood</li>
-                            </ul>
-                        </div>
-                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
-                            <h4 class="text-xl font-bold text-red-400 mb-2">Horde Route</h4>
-                            <ul class="space-y-2 text-gray-300 text-sm">
-                                <li><strong class="text-white">1–10:</strong> Starter Zone</li>
-                                <li><strong class="text-white">10–14:</strong> Durotar / Mulgore / Silverpine</li>
-                                <li><strong class="text-white text-yellow-300">14–25: The Barrens</strong> <br><span class="text-gray-400">Do not skip! The quest density here is the best in the game around level 14, easily carrying you to 25 with Crossroads and Camp Taurajo hubs.</span></li>
-                                <li><strong class="text-white">25–30:</strong> Stonetalon Mountains & Ashenvale</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900 p-4 rounded border border-gray-700">
-                        <h4 class="text-xl font-bold text-white mb-2">Neutral Zones (30–60)</h4>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            <strong class="text-yellow-200">30-40:</strong> Stranglethorn Vale, Arathi Highlands, Desolace.<br>
-                            <strong class="text-yellow-200">40-50:</strong> Tanaris, Feralas, The Hinterlands, Searing Gorge.<br>
-                            <strong class="text-yellow-200">50-60:</strong> Un'Goro Crater, Western Plaguelands, Eastern Plaguelands, Winterspring.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 2. Cozy Sleeping Bag -->
-                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-green-500">
-                    <h3 class="text-2xl font-bold text-green-400 mb-4 flex items-center"><span class="mr-2">▶</span> Cozy Sleeping Bag Questline</h3>
-                    <p class="text-gray-300 mb-4">The <strong class="text-green-300">Student Fodder</strong> and <strong class="text-blue-300">Cozy Sleeping Bag</strong> give you a massive stacking XP buff. Here is how to unlock it step-by-step:</p>
-                    <ol class="list-decimal pl-5 space-y-3 text-gray-300">
-                        <li><strong class="text-white">Start the Quest:</strong> Horde starts at the burnt out camp south of Camp Taurajo in <span class="text-yellow-200">The Barrens</span>. Alliance starts in <span class="text-yellow-200">Westfall</span> near the Alexston Farm dirt mound.</li>
-                        <li><strong class="text-white">Stonetalon / Loch Modan:</strong> Follow the note to the Sun Rock Retreat path (Horde) or the Stonewrought Dam (Alliance). Click the interactable item on the ground.</li>
-                        <li><strong class="text-white">Hillsbrad Foothills:</strong> Head to the secret camp on the mountain ridge separating Hillsbrad and Alterac Mountains.</li>
-                        <li><strong class="text-white">Wailing Caverns (Final Step):</strong> Climb the rocks directly above the Wailing Caverns entrance in the Barrens. Complete a small jumping puzzle to find the messenger's camp and loot the bag!</li>
-                    </ol>
-                </div>
-
-                <!-- 3. Legacy System -->
-                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-purple-500">
-                    <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center"><span class="mr-2">▶</span> Legacy System (Account-Wide)</h3>
-                    <p class="text-gray-300 mb-4">WoW Forever features a modernized Legacy System, ensuring your hard work is respected across all your characters (Alts).</p>
-                    <div class="grid md:grid-cols-3 gap-4">
-                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
-                            <h4 class="text-lg font-bold text-purple-300 mb-2">Reputation Sharing</h4>
-                            <p class="text-sm text-gray-400">Unlock a reputation once, and the progress is shared. You only need to grind Argent Dawn or Timbermaw Hold on your main.</p>
-                        </div>
-                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
-                            <h4 class="text-lg font-bold text-purple-300 mb-2">Warbank Access</h4>
-                            <p class="text-sm text-gray-400">A new tab in the bank allows you to deposit crafting materials, gold, and bind-on-account items instantly accessible by any alt.</p>
-                        </div>
-                        <div class="bg-gray-900 p-4 rounded border border-gray-700">
-                            <h4 class="text-lg font-bold text-purple-300 mb-2">Transmog Unlocks</h4>
-                            <p class="text-sm text-gray-400">Looting any soulbound item permanently unlocks its appearance for your entire account, regardless of armor type.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Addons -->
-                <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-orange-500">
-                    <h3 class="text-2xl font-bold text-orange-400 mb-4 flex items-center"><span class="mr-2">▶</span> Essential Addons</h3>
-                    <p class="text-gray-300 mb-4">You cannot play efficiently without these core addons installed in your <code>_classic_/Interface/AddOns</code> folder:</p>
-                    <div class="space-y-4">
-                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
-                            <div class="flex-shrink-0 mt-1">
-                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Questie</span>
+                    <!-- 1. Speed Leveling -->
+                    <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-yellow-500">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-4 flex items-center"><span class="mr-2">▶</span> 1-60 Speed Leveling Strategy</h3>
+                        <p class="text-gray-300 mb-6">Choose your faction below to enter the deep-dive, step-by-step questing guides. These guides optimize travel time, grinds, and quest overlap to get you to 60 as fast as possible.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6 mb-4">
+                            <!-- Alliance Card -->
+                            <div class="bg-gray-900 p-6 rounded border border-blue-800 flex flex-col items-center text-center hover:bg-gray-800 transition shadow-lg">
+                                <h4 class="text-2xl font-bold text-blue-400 mb-2">Alliance Leveling</h4>
+                                <p class="text-gray-400 text-sm mb-6">Elwynn Forest &rarr; Westfall &rarr; Redridge &rarr; Duskwood and beyond. Step-by-step quest routing.</p>
+                                <button onclick="switchGuideView('guide-view-alliance')" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded transition w-full">
+                                    Open Alliance Guide
+                                </button>
                             </div>
-                            <div class="ml-4">
-                                <p class="text-sm text-gray-300">Absolute necessity. Shows available quests and objectives on your map. <strong>Pro-Tip:</strong> Go to settings and enable "Show low level quests" if you are out-leveling zones but still need the reputation.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
-                            <div class="flex-shrink-0 mt-1">
-                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Bagnon</span>
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-sm text-gray-300">Merges all your separate bags into one massive window. Also lets you see the inventory and gold of your offline alts when hovering over items.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
-                            <div class="flex-shrink-0 mt-1">
-                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Details!</span>
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-sm text-gray-300">The most accurate damage meter. Use this to track not just your DPS, but your threat generation (TinyThreat plugin) and interrupt tracking in dungeons.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
-                            <div class="flex-shrink-0 mt-1">
-                                <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">WeakAuras</span>
-                            </div>
-                            <div class="ml-4">
-                                <p class="text-sm text-gray-300">The most powerful addon in the game. You can import custom class scripts from <a href="https://wago.io" class="text-blue-400 underline">Wago.io</a> to track your cooldowns, mana ticks, and combat procs visually in the middle of your screen.</p>
+                            
+                            <!-- Horde Card -->
+                            <div class="bg-gray-900 p-6 rounded border border-red-800 flex flex-col items-center text-center hover:bg-gray-800 transition shadow-lg">
+                                <h4 class="text-2xl font-bold text-red-400 mb-2">Horde Leveling</h4>
+                                <p class="text-gray-400 text-sm mb-6">Durotar &rarr; The Barrens &rarr; Stonetalon &rarr; Stranglethorn and beyond. Step-by-step quest routing.</p>
+                                <button onclick="switchGuideView('guide-view-horde')" class="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-6 rounded transition w-full">
+                                    Open Horde Guide
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                    <!-- 2. Cozy Sleeping Bag -->
+                    <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                        <h3 class="text-2xl font-bold text-green-400 mb-4 flex items-center"><span class="mr-2">▶</span> Cozy Sleeping Bag Questline</h3>
+                        <p class="text-gray-300 mb-4">The <strong class="text-green-300">Student Fodder</strong> and <strong class="text-blue-300">Cozy Sleeping Bag</strong> give you a massive stacking XP buff. Here is how to unlock it step-by-step:</p>
+                        <ol class="list-decimal pl-5 space-y-3 text-gray-300">
+                            <li><strong class="text-white">Start the Quest:</strong> Horde starts at the burnt out camp south of Camp Taurajo in <span class="text-yellow-200">The Barrens</span>. Alliance starts in <span class="text-yellow-200">Westfall</span> near the Alexston Farm dirt mound.</li>
+                            <li><strong class="text-white">Stonetalon / Loch Modan:</strong> Follow the note to the Sun Rock Retreat path (Horde) or the Stonewrought Dam (Alliance). Click the interactable item on the ground.</li>
+                            <li><strong class="text-white">Hillsbrad Foothills:</strong> Head to the secret camp on the mountain ridge separating Hillsbrad and Alterac Mountains.</li>
+                            <li><strong class="text-white">Wailing Caverns (Final Step):</strong> Climb the rocks directly above the Wailing Caverns entrance in the Barrens. Complete a small jumping puzzle to find the messenger's camp and loot the bag!</li>
+                        </ol>
+                    </div>
+
+                    <!-- 3. Legacy System -->
+                    <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                        <h3 class="text-2xl font-bold text-purple-400 mb-4 flex items-center"><span class="mr-2">▶</span> Legacy System (Account-Wide)</h3>
+                        <p class="text-gray-300 mb-4">WoW Forever features a modernized Legacy System, ensuring your hard work is respected across all your characters (Alts).</p>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                                <h4 class="text-lg font-bold text-purple-300 mb-2">Reputation Sharing</h4>
+                                <p class="text-sm text-gray-400">Unlock a reputation once, and the progress is shared. You only need to grind Argent Dawn or Timbermaw Hold on your main.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                                <h4 class="text-lg font-bold text-purple-300 mb-2">Warbank Access</h4>
+                                <p class="text-sm text-gray-400">A new tab in the bank allows you to deposit crafting materials, gold, and bind-on-account items instantly accessible by any alt.</p>
+                            </div>
+                            <div class="bg-gray-900 p-4 rounded border border-gray-700">
+                                <h4 class="text-lg font-bold text-purple-300 mb-2">Transmog Unlocks</h4>
+                                <p class="text-sm text-gray-400">Looting any soulbound item permanently unlocks its appearance for your entire account, regardless of armor type.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Addons -->
+                    <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-orange-500">
+                        <h3 class="text-2xl font-bold text-orange-400 mb-4 flex items-center"><span class="mr-2">▶</span> Essential Addons</h3>
+                        <p class="text-gray-300 mb-4">You cannot play efficiently without these core addons installed in your <code>_classic_/Interface/AddOns</code> folder:</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                                <div class="flex-shrink-0 mt-1">
+                                    <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Questie</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm text-gray-300">Absolute necessity. Shows available quests and objectives on your map. <strong>Pro-Tip:</strong> Go to settings and enable "Show low level quests" if you are out-leveling zones but still need the reputation.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                                <div class="flex-shrink-0 mt-1">
+                                    <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Bagnon</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm text-gray-300">Merges all your separate bags into one massive window. Also lets you see the inventory and gold of your offline alts when hovering over items.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-gray-900 p-4 rounded border border-gray-700">
+                                <div class="flex-shrink-0 mt-1">
+                                    <span class="bg-orange-500 text-white font-bold px-2 py-1 rounded text-xs">Details!</span>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm text-gray-300">The most accurate damage meter. Use this to track not just your DPS, but your threat generation (TinyThreat plugin) and interrupt tracking in dungeons.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Professions -->
+                    <div class="bg-wow-panel p-6 rounded-lg shadow-md border-t-4 border-teal-500">
+                        <h3 class="text-2xl font-bold text-teal-400 mb-4 flex items-center"><span class="mr-2">▶</span> Best Professions by Class</h3>
+                        <p class="text-gray-300 mb-6">Maximize your gold, utility, and crafting potential by picking the optimal professions for your specific class and role.</p>
+                        <button onclick="switchGuideView('guide-view-professions')" class="bg-teal-700 hover:bg-teal-600 text-white font-bold py-2 px-6 rounded transition w-full md:w-auto">
+                            Open Professions Guide
+                        </button>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <!-- GEAR TAB -->
+            <!-- DETAILED HORDE GUIDE -->
+            <div id="guide-view-horde" style="display: none;">
+                <button onclick="switchGuideView('guide-view-main')" class="mb-6 text-gray-400 hover:text-white flex items-center transition">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back to General Guides
+                </button>
+                
+                <div class="flex items-center space-x-4 mb-4 border-b border-red-800 pb-4">
+                    <h2 class="text-4xl font-extrabold text-red-500">Horde Leveling Routes</h2>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Select your starting race to view the optimized 1-60 route:</p>
+                <div class="flex space-x-2 mb-6 overflow-x-auto">
+                    <button onclick="switchSubGuide('horde', 'orc-troll')" id="btn-horde-orc-troll" class="sub-nav-btn horde-btn bg-red-700 text-white font-bold py-2 px-4 rounded transition">Orc & Troll</button>
+                    <button onclick="switchSubGuide('horde', 'tauren')" id="btn-horde-tauren" class="sub-nav-btn horde-btn bg-gray-800 text-gray-400 hover:bg-gray-700 font-bold py-2 px-4 rounded transition">Tauren</button>
+                    <button onclick="switchSubGuide('horde', 'undead')" id="btn-horde-undead" class="sub-nav-btn horde-btn bg-gray-800 text-gray-400 hover:bg-gray-700 font-bold py-2 px-4 rounded transition">Undead</button>
+                </div>
+
+                <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                    <!-- ORC/TROLL -->
+                    <div id="horde-orc-troll" class="sub-guide horde-sub block">
+                        <h3 class="text-xl font-bold text-red-400 mb-4 border-b border-gray-700 pb-2">Orc & Troll Route</h3>
+                        <div class="border-l-4 border-red-700 ml-4 pl-6 space-y-8">
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 1-12: Durotar</h3>
+                                <p class="text-gray-300 text-sm">Clear Valley of Trials. Move to Sen'jin Village at level 5. Do Echo Isles, then Razor Hill. Finish Tiragarde Keep before going to Orgrimmar and taking the zeppelin/running to Barrens.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 12-25: The Barrens</h3>
+                                <p class="text-gray-300 text-sm">Hub out of Crossroads. Do all Oasis quests. Around level 15, head south to Camp Taurajo. Do Wailing Caverns at level 18+. Grind Harpies and complete Ishamuhale before leaving.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 25-60: Shared Horde Route</h3>
+                                <p class="text-gray-300 text-sm">Stonetalon Mountains & Ashenvale (25-30). Stranglethorn Vale & Arathi (30-40). Tanaris & Feralas (40-50). Un'Goro, Plaguelands, Winterspring (50-60).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAUREN -->
+                    <div id="horde-tauren" class="sub-guide horde-sub hidden">
+                        <h3 class="text-xl font-bold text-red-400 mb-4 border-b border-gray-700 pb-2">Tauren Route</h3>
+                        <div class="border-l-4 border-red-700 ml-4 pl-6 space-y-8">
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 1-10: Mulgore</h3>
+                                <p class="text-gray-300 text-sm">Start in Camp Narache. Grind heavily on the way to Bloodhoof Village. Complete the well quests and venture to Thunder Bluff. The mob density is great here.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 10-25: The Barrens</h3>
+                                <p class="text-gray-300 text-sm">Run east into the Barrens. Stop at Camp Taurajo to grab flight path, then run to Crossroads. Merge into the main Barrens route (Oasis, Wailing Caverns, Harpies).</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 25-60: Shared Horde Route</h3>
+                                <p class="text-gray-300 text-sm">Stonetalon Mountains (very close by!) & Ashenvale (25-30). Stranglethorn Vale & Arathi (30-40). Tanaris & Feralas (40-50). Un'Goro, Plaguelands, Winterspring (50-60).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UNDEAD -->
+                    <div id="horde-undead" class="sub-guide horde-sub hidden">
+                        <h3 class="text-xl font-bold text-red-400 mb-4 border-b border-gray-700 pb-2">Undead Route</h3>
+                        <div class="border-l-4 border-red-700 ml-4 pl-6 space-y-8">
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 1-12: Tirisfal Glades</h3>
+                                <p class="text-gray-300 text-sm">Deathknell into Brill. Complete Agamand Mills and the Scarlet Crusade tower quests. Excellent quest flow and close hubs.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 12-20: Silverpine vs. The Barrens</h3>
+                                <p class="text-gray-300 text-sm">Silverpine Forest is decent until level 15, but then it becomes very difficult. <strong>Pro-tip:</strong> Take the zeppelin from Undercity to Orgrimmar at level 13-14 and do The Barrens instead for much faster XP.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-red-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 20-60: Shared Horde Route</h3>
+                                <p class="text-gray-300 text-sm">If you stayed in Silverpine, do Shadowfang Keep. Otherwise, follow the main route: Ashenvale (25-30), Stranglethorn (30-40), Tanaris (40-50), Un'Goro & Plaguelands (50-60).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DETAILED ALLIANCE GUIDE -->
+            <div id="guide-view-alliance" style="display: none;">
+                <button onclick="switchGuideView('guide-view-main')" class="mb-6 text-gray-400 hover:text-white flex items-center transition">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back to General Guides
+                </button>
+                
+                <div class="flex items-center space-x-4 mb-4 border-b border-blue-800 pb-4">
+                    <h2 class="text-4xl font-extrabold text-blue-500">Alliance Leveling Routes</h2>
+                </div>
+
+                <p class="text-gray-300 mb-4">Select your starting race to view the optimized 1-60 route:</p>
+                <div class="flex space-x-2 mb-6 overflow-x-auto">
+                    <button onclick="switchSubGuide('alliance', 'human')" id="btn-alliance-human" class="sub-nav-btn alliance-btn bg-blue-600 text-white font-bold py-2 px-4 rounded transition">Human</button>
+                    <button onclick="switchSubGuide('alliance', 'dwarf-gnome')" id="btn-alliance-dwarf-gnome" class="sub-nav-btn alliance-btn bg-gray-800 text-gray-400 hover:bg-gray-700 font-bold py-2 px-4 rounded transition">Dwarf & Gnome</button>
+                    <button onclick="switchSubGuide('alliance', 'night-elf')" id="btn-alliance-night-elf" class="sub-nav-btn alliance-btn bg-gray-800 text-gray-400 hover:bg-gray-700 font-bold py-2 px-4 rounded transition">Night Elf</button>
+                </div>
+
+                <div class="bg-wow-panel p-6 rounded-lg shadow-md mb-8">
+                    <!-- HUMAN -->
+                    <div id="alliance-human" class="sub-guide alliance-sub block">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4 border-b border-gray-700 pb-2">Human Route</h3>
+                        <div class="border-l-4 border-blue-700 ml-4 pl-6 space-y-8">
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 1-10: Elwynn Forest</h3>
+                                <p class="text-gray-300 text-sm">Northshire Abbey -> Goldshire. Group up Fargodeep Mine and Gold Dust quests. Push east to Eastvale Logging camp for Princess and Red Linen Goods.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 10-20: Westfall & Redridge</h3>
+                                <p class="text-gray-300 text-sm">Go to Westfall, do the Defias Brotherhood chain. At level 15, bounce to Redridge Mountains for a few quests to bridge the level gap, then return to Westfall for Deadmines at level 18+.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 20-60: Shared Alliance Route</h3>
+                                <p class="text-gray-300 text-sm">Duskwood (20-30 - fantastic zone!). Stranglethorn Vale & Southshore (30-40). Feralas & Tanaris (40-50). Searing Gorge, Un'goro, Plaguelands (50-60).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DWARF / GNOME -->
+                    <div id="alliance-dwarf-gnome" class="sub-guide alliance-sub hidden">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4 border-b border-gray-700 pb-2">Dwarf & Gnome Route</h3>
+                        <div class="border-l-4 border-blue-700 ml-4 pl-6 space-y-8">
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 1-10: Dun Morogh</h3>
+                                <p class="text-gray-300 text-sm">Coldridge Valley into Kharanos. Grind troggs and wendigos. Protect the quarry and do the Gnomeregan pre-quests.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 10-20: Loch Modan & Darkshore</h3>
+                                <p class="text-gray-300 text-sm">Loch Modan is great until level 14. After that, take the tram to Stormwind, boat to Darkshore, and do quests there from 14-18. It's much faster than staying in Loch Modan.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 20-60: Shared Alliance Route</h3>
+                                <p class="text-gray-300 text-sm">Merge into Wetlands & Duskwood (20-30). Stranglethorn Vale & Southshore (30-40). Feralas & Tanaris (40-50). Searing Gorge, Un'goro, Plaguelands (50-60).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NIGHT ELF -->
+                    <div id="alliance-night-elf" class="sub-guide alliance-sub hidden">
+                        <h3 class="text-xl font-bold text-blue-400 mb-4 border-b border-gray-700 pb-2">Night Elf Route</h3>
+                        <div class="border-l-4 border-blue-700 ml-4 pl-6 space-y-8">
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 1-10: Teldrassil</h3>
+                                <p class="text-gray-300 text-sm">Shadowglen into Dolanaar. Do the Ban'ethil Barrow Den quests carefully (easy to get lost/die). Hit level 10 and go to Darnassus.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 10-20: Darkshore</h3>
+                                <p class="text-gray-300 text-sm">Auberdine is an amazing hub. Do all the Beached Sea Creature quests along the coast. Group up for the Tower of Althalaxx. Run Deadmines (via boat to Wetlands, run to Ironforge, tram to Stormwind) or Wailing Caverns at level 18+.</p>
+                            </div>
+                            <div class="relative">
+                                <div class="absolute w-4 h-4 bg-blue-500 rounded-full -left-[1.95rem] top-1 border-4 border-[#1e293b]"></div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Level 20-60: Shared Alliance Route</h3>
+                                <p class="text-gray-300 text-sm">Ashenvale & Wetlands (20-30). Stranglethorn Vale & Southshore (30-40). Feralas & Tanaris (40-50). Searing Gorge, Un'goro, Plaguelands (50-60).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DETAILED PROFESSIONS GUIDE -->
+            <div id="guide-view-professions" style="display: none;">
+                <button onclick="switchGuideView('guide-view-main')" class="mb-6 text-gray-400 hover:text-white flex items-center transition">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Back to General Guides
+                </button>
+                
+                <div class="flex items-center space-x-4 mb-6 border-b border-teal-800 pb-4">
+                    <h2 class="text-4xl font-extrabold text-teal-400">Class Professions Guide</h2>
+                </div>
+                
+                <p class="text-gray-300 mb-8">Choosing the right professions while leveling can either save you gold, provide powerful Bind-on-Pickup gear, or give you crucial PvP utility. Here are the optimal combinations for every class.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    <!-- Warrior -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#C79C6E] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#C79C6E] mb-2 flex justify-between">Warrior</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Engineering & Mining</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Essential for both PvE and PvP. Iron Grenades provide an AoE stun and extra damage, while Target Dummies can save you from a bad pull. Mining fuels the expensive engineering mats.</p>
+                    </div>
+
+                    <!-- Paladin -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#F58CBA] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#F58CBA] mb-2 flex justify-between">Paladin</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Engineering & Mining</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Paladins lack gap closers and ranged pulls. Engineering gives you bombs to pull from afar and stun runners. It's the ultimate utility boost for leveling.</p>
+                    </div>
+
+                    <!-- Hunter -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#ABD473] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#ABD473] mb-2 flex justify-between">Hunter</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Skinning & Leatherworking</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Hunters kill beasts very quickly. Skinning generates raw gold, and Leatherworking allows you to craft your own Agility gear (and eventually Devilsaur Armor at 60).</p>
+                    </div>
+
+                    <!-- Rogue -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#FFF569] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#FFF569] mb-2 flex justify-between">Rogue</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Skinning & Leatherworking</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Very similar to Hunters. You can craft your own leather gear. Alternatively, pick <strong>Herbalism & Alchemy</strong> to make your own Blinding Powder (Swiftthistle) and healing potions.</p>
+                    </div>
+
+                    <!-- Priest -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-white shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-white mb-2 flex justify-between">Priest</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Tailoring & Enchanting</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Tailoring provides bags and the powerful Bind-on-Pickup <em>Truefaith Vestments</em> at 60. Enchanting lets you craft powerful wands early on (Greater Magic Wand) for smooth leveling.</p>
+                    </div>
+
+                    <!-- Shaman -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#0070DE] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#0070DE] mb-2 flex justify-between">Shaman</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Herbalism & Alchemy</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Ghost Wolf allows you to travel fast between herb nodes. Alchemy provides constant mana potions, which are incredibly important to keep your leveling speed high.</p>
+                    </div>
+
+                    <!-- Mage -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#69CCF0] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#69CCF0] mb-2 flex justify-between">Mage</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Tailoring & Herbalism</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Tailoring for the <em>Robe of the Archmage</em>. Herbalism is massive money for Mages because you can easily AoE farm dungeons like Zul'Farrak and gather rare herbs safely.</p>
+                    </div>
+
+                    <!-- Warlock -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#9482C9] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#9482C9] mb-2 flex justify-between">Warlock</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Tailoring & Enchanting</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Tailoring allows you to craft the incredible <em>Robes of the Void</em> at 60. Disenchanting the green items you get while drain-tanking yields steady passive income.</p>
+                    </div>
+
+                    <!-- Druid -->
+                    <div class="bg-gray-900 p-5 rounded border-l-4 border-[#FF7D0A] shadow hover:bg-gray-800 transition">
+                        <h3 class="text-xl font-bold text-[#FF7D0A] mb-2 flex justify-between">Druid</h3>
+                        <p class="font-bold text-white mb-2 pb-2 border-b border-gray-700">Herbalism & Alchemy</p>
+                        <p class="text-sm text-gray-400 leading-relaxed"><strong>Why:</strong> Tauren Druids gather herbs extremely fast. Travel form makes node-hopping a breeze. Alchemy provides consumables that make leveling in Bear/Cat form even more efficient.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inject JS for switching views -->
+            <script>
+                function switchGuideView(viewId) {
+                    document.getElementById('guide-view-main').style.display = 'none';
+                    document.getElementById('guide-view-horde').style.display = 'none';
+                    document.getElementById('guide-view-alliance').style.display = 'none';
+                    if (document.getElementById('guide-view-professions')) {
+                        document.getElementById('guide-view-professions').style.display = 'none';
+                    }
+                    document.getElementById(viewId).style.display = 'block';
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+
+                function switchSubGuide(faction, raceId) {
+                    // Hide all sub guides in this faction
+                    document.querySelectorAll('.' + faction + '-sub').forEach(el => {
+                        el.classList.add('hidden');
+                        el.classList.remove('block');
+                    });
+                    
+                    // Reset button styles
+                    document.querySelectorAll('.' + faction + '-btn').forEach(btn => {
+                        btn.classList.remove(faction === 'horde' ? 'bg-red-700' : 'bg-blue-600', 'text-white');
+                        btn.classList.add('bg-gray-800', 'text-gray-400');
+                    });
+                    
+                    // Show target
+                    const targetEl = document.getElementById(faction + '-' + raceId);
+                    if (targetEl) {
+                        targetEl.classList.remove('hidden');
+                        targetEl.classList.add('block');
+                    }
+                    
+                    // Highlight button
+                    const activeBtn = document.getElementById('btn-' + faction + '-' + raceId);
+                    if (activeBtn) {
+                        activeBtn.classList.remove('bg-gray-800', 'text-gray-400');
+                        activeBtn.classList.add(faction === 'horde' ? 'bg-red-700' : 'bg-blue-600', 'text-white');
+                    }
+                }
+            </script>
+        </section><!-- GEAR TAB -->
         <section id="gear" class="tab-pane">
             <h2 class="text-3xl font-bold text-white mb-6">Gear & Tools</h2>
             <div class="bg-wow-panel p-10 rounded-lg text-center border-dashed border-2 border-gray-600">
