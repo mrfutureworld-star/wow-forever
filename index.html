@@ -26,32 +26,28 @@
 </head>
 <body class="min-h-screen flex flex-col">
     <!-- Header & Nav -->
-    <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-           <a href="#" class="flex items-center">
-    <a href="#" class="flex items-center py-1 pl-2">
-    <img src="transparent_logo.png" alt="WoW Forever" class="h-16 md:h-20 w-auto drop-shadow-[0_0_12px_rgba(255,215,0,0.4)]">
-</a>
-            <nav class="flex flex-wrap gap-4 md:gap-6 w-full md:w-auto pb-2 md:pb-0 items-center">
-                <button class="nav-btn text-yellow-400 font-bold" data-target="home">Home</button>
+        <header class="bg-gray-900 border-b border-gray-700 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-center items-center">
+            <nav class="flex flex-wrap gap-6 md:gap-10 justify-center items-center text-lg">
+                <button class="nav-btn text-yellow-400 font-bold hover:text-yellow-300 transition" data-target="home">Home</button>
                 <button class="nav-btn text-gray-400 hover:text-yellow-400 transition" data-target="races">Races</button>
                 
                 <!-- Class Dropdown -->
                 <div class="relative group">
                     <button id="classDropdownBtn" class="text-gray-400 hover:text-yellow-400 transition flex items-center focus:outline-none">
                         Classes
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div id="classDropdownMenu" class="absolute left-0 mt-2 w-40 bg-gray-800 border border-gray-700 rounded-md shadow-xl z-50 hidden">
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-warrior transition" data-target="warrior">Warrior</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-paladin transition" data-target="paladin">Paladin</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-hunter transition" data-target="hunter">Hunter</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-rogue transition" data-target="rogue">Rogue</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-priest transition" data-target="priest">Priest</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-shaman transition" data-target="shaman">Shaman</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-mage transition" data-target="mage">Mage</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-warlock transition" data-target="warlock">Warlock</button>
-                        <button class="nav-btn block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-c-druid transition" data-target="druid">Druid</button>
+                    <div id="classDropdownMenu" class="absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-gray-800 border border-gray-700 rounded-md shadow-xl z-50 hidden">
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-warrior transition border-b border-gray-700" data-target="warrior">Warrior</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-paladin transition border-b border-gray-700" data-target="paladin">Paladin</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-hunter transition border-b border-gray-700" data-target="hunter">Hunter</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-rogue transition border-b border-gray-700" data-target="rogue">Rogue</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-priest transition border-b border-gray-700" data-target="priest">Priest</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-shaman transition border-b border-gray-700" data-target="shaman">Shaman</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-mage transition border-b border-gray-700" data-target="mage">Mage</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-warlock transition border-b border-gray-700" data-target="warlock">Warlock</button>
+                        <button class="nav-btn block w-full text-center px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-c-druid transition" data-target="druid">Druid</button>
                     </div>
                 </div>
 
@@ -66,12 +62,12 @@
         
         <!-- HOME TAB -->
         <section id="home" class="tab-pane active">
-<div class="text-center mb-12">
-             <!-- Stora WoW-loggan istället för text -->
-             <div class="max-w-4xl mx-auto mb-10">
-    <img src="wow_forever_super_transparent.png" alt="WoW Forever Logo" class="w-full h-auto drop-shadow-[0_0_25px_rgba(255,215,0,0.2)]">
-</div>
-         </div>
+            <div class="text-center mb-12">
+                <!-- Hero Group Image (Replaced Welcome Text) -->
+                <div class="max-w-4xl mx-auto mb-10">
+                    <img src="wow_forever_super_transparent.png" alt="WoW Forever Logo" class="w-full h-auto drop-shadow-[0_0_25px_rgba(255,215,0,0.2)]">
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-wow-panel p-6 rounded-lg shadow-lg col-span-1 md:col-span-2">
                     <h3 class="text-2xl font-bold text-yellow-400 mb-4 border-b border-gray-700 pb-2">Select Your Class</h3>
